@@ -1,80 +1,15 @@
-# =========================
-# Android / Gradle
-# =========================
+*.iml
 .gradle
+/local.properties
+/.idea/caches
+/.idea/libraries
+/.idea/modules.xml
+/.idea/workspace.xml
+/.idea/navEditor.xml
+/.idea/assetWizardSettings.xml
+.DS_Store
 /build
 /captures
 .externalNativeBuild
 .cxx
 local.properties
-
-# =========================
-# IntelliJ / Android Studio
-# =========================
-.idea/
-*.iml
-*.ipr
-*.iws
-
-# Keep code style configs if needed
-!.idea/codeStyles/
-!.idea/inspectionProfiles/
-
-# =========================
-# OS Files
-# =========================
-.DS_Store
-Thumbs.db
-
-# =========================
-# Kotlin / Java
-# =========================
-*.class
-*.log
-
-# =========================
-# Generated Files
-# =========================
-bin/
-gen/
-out/
-
-# =========================
-# Build Outputs
-# =========================
-app/build/
-*/build/
-
-# =========================
-# Keystore / Signing
-# =========================
-*.jks
-*.keystore
-
-# =========================
-# Firebase / Google Services (필요시)
-# =========================
-google-services.json
-
-# =========================
-# NDK
-# =========================
-obj/
-libs/
-
-# =========================
-# Test / Coverage
-# =========================
-coverage/
-*.ec
-
-# =========================
-# Temporary Files
-# =========================
-*.tmp
-*.swp
-
-# =========================
-# Mac / Linux hidden
-# =========================
-.*.swp
