@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/homeFragment"
+        android:title="홈" />
+    <!--        android:icon="@drawable/ic_home"-->
+
+    <item
+        android:id="@+id/requestFragment"
+        android:title="요청사항" />
+<!--    android:icon="@drawable/ic_search"-->
+
+    <item
+        android:id="@+id/incidentFragment"
+        android:title="장애" />
+
+    <item
+        android:id="@+id/searchFragment"
+        android:title="검색" />
+
+    <item
+        android:id="@+id/settingFragment"
+        android:title="설정" />
+<!--    android:icon="@drawable/ic_person"-->
+
+</menu>

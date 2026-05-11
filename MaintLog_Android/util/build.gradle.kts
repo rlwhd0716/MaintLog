@@ -1,17 +1,19 @@
 plugins {
     alias(libs.plugins.android.library)
+    alias(libs.plugins.kotlin.plugin)
+    alias(libs.plugins.hilt.plugin)
+    alias(libs.plugins.ksp.plugin)
+    alias(libs.plugins.kapt.plugin)
+    alias(libs.plugins.parcelize.plugin)
 }
 
 android {
     namespace = "com.github.util"
-    compileSdk {
-        version = release(36) {
-            minorApiLevel = 1
-        }
-    }
+    compileSdk = rootProject.extra["currentSdk"] as Int
+
 
     defaultConfig {
-        minSdk = 26
+        minSdk = rootProject.extra["minSdk"] as Int
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
         consumerProguardFiles("consumer-rules.pro")
@@ -26,17 +28,45 @@ android {
             )
         }
     }
+    buildFeatures {
+        dataBinding = true
+        viewBinding = true
+    }
     compileOptions {
-        sourceCompatibility = JavaVersion.VERSION_11
-        targetCompatibility = JavaVersion.VERSION_11
+        sourceCompatibility = rootProject.extra["JDK-Version"] as JavaVersion
+        targetCompatibility = rootProject.extra["JDK-Version"] as JavaVersion
+    }
+
+    kotlinOptions {
+        jvmTarget = rootProject.extra["JDK-Target"] as String
     }
 }
 
 dependencies {
-    implementation(libs.androidx.core.ktx)
-    implementation(libs.androidx.appcompat)
-    implementation(libs.material)
-    testImplementation(libs.junit)
-    androidTestImplementation(libs.androidx.junit)
-    androidTestImplementation(libs.androidx.espresso.core)
+    implementation(libs.bundles.ui)
+    implementation(libs.activity)
+    implementation(libs.androidx.constraintlayout)
+    testImplementation(libs.test.junit)
+    androidTestImplementation(libs.android.test.junit)
+    androidTestImplementation(libs.android.test.core)
+
+    //hilt
+    implementation(libs.hilt.android)
+    ksp(libs.hilt.compiler)
+
+    //viewModel, livedata
+    implementation(libs.bundles.lifecycle)
+    ksp(libs.lifecycle.compiler)
+
+    // Retrofit, Okhttp, gson
+    implementation(libs.bundles.retrofit)
+
+    // Coroutine
+    implementation(libs.bundles.coroutines)
+
+    // location
+    // vietmap 과 동일한 버전의 라이브러리 사용
+    implementation(libs.androidsvg)
+
+    implementation(libs.shimmer)
 }

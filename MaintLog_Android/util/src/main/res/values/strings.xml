@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- 공통 -->
+    <string name="common_close">닫기</string>
+    <string name="common_cancel">취소</string>
+    <string name="common_ok">확인</string>
+    <string name="common_exit">종료</string>
+
+    <!-- 프로그래스 팝업 -->
+    <string name="msg_progress_default">Loading</string>
+
+    <string name="msg_error_network_connection_1">네트워크 통신에 문제가 발생하였습니다.</string>
+    <string name="msg_error_network_connection_2">네트워크 통신에 기타 장애 발생하였습니다.</string>
+
+    <!--권한-->
+    <string name="permission_calendar">캘린더</string>
+    <string name="permission_call_log">통화 기록</string>
+    <string name="permission_camera">카메라</string>
+    <string name="permission_contacts">주소록</string>
+    <string name="permission_location">위치</string>
+    <string name="permission_microphone">마이크</string>
+    <string name="permission_phone">전화</string>
+    <string name="permission_sensors">신체 센서</string>
+    <string name="permission_sms">SMS</string>
+    <string name="permission_storage">저장공간</string>
+    <string name="permission_bluetooth">블루투스</string>
+    <string name="permission_notification">알람</string>
+
+    <string name="permission_setting_title"> 권한 설정 </string>
+    <string name="permission_setting_body"> 앱 실행에 필요한 권한 설정이 필요합니다. \n\n설정 > 권한 > 거부된 권한 허용 </string>
+    <string name="permission_setting"> 설정 </string>
+</resources>

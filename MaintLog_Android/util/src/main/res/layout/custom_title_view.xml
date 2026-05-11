@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+    <data>
+    </data>
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="65dp"
+        android:background="@color/primaryBlack"
+        android:orientation="vertical">
+
+        <LinearLayout
+            xmlns:tools="http://schemas.android.com/tools"
+            android:layout_width="match_parent"
+            android:layout_height="64dp"
+            android:orientation="horizontal"
+            tools:context="com.github.util.ui.CustomTitleView">
+
+
+            <com.github.util.ui.BounceImageButton
+                android:id="@+id/btn_top_back"
+                android:layout_width="48dp"
+                android:layout_height="match_parent"
+                android:layout_marginStart="24dp"
+                android:background="@null"
+                android:src="@drawable/ic_back" />
+
+            <TextView
+                android:id="@+id/tv_top_title"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:fontFamily="@font/pretendard_semibold"
+                android:gravity="center"
+                android:textColor="@color/primaryColor"
+                android:textSize="@dimen/custom_title_text_size"
+                tools:text="Maint_Log" />
+
+            <!--  Title 을 중간 정렬하기 위한 View  -->
+            <View
+                android:layout_width="72dp"
+                android:layout_height="match_parent"/>
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/primaryColor" />
+    </LinearLayout>
+</layout>

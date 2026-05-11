@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="purple_200">#FFBB86FC</color>
+    <color name="purple_500">#FF6200EE</color>
+    <color name="purple_700">#FF3700B3</color>
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="teal_700">#FF018786</color>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+
+    <color name="colorPrimary">#8D64F9</color>
+    <color name="colorPrimaryDark">#7845F3</color>
+    <color name="colorAccent">#F56FA3</color>
+    <color name="red">#A01D1D</color>
+    <color name="blue">#0E0E9A</color>
+    <color name="green">#146E17</color>
+    <color name="yellow">#D3C022</color>
+
+    <!--  디자인 컬러  -->
+    <!--  공통 색상 모음  -->
+    <color name="primaryBlack">#222222</color>
+    <color name="primaryBlackAlpha">#CC222222</color>
+    <color name="primaryBlack80">#80222222</color>
+    <color name="primaryDarkGray">#444444</color>
+    <color name="primaryDarkGrayAlpha">#CC444444</color>
+    <color name="primaryColor">#FFE97D</color>
+    <color name="primaryYellowAlpha">#1AFFE97D</color>
+    <color name="primaryDisabledColor">#BBBBBB</color>
+    <color name="primaryGray">#666666</color>
+    <color name="primaryGrayAlpha">#CC666666</color>
+    <color name="primaryLightGray">#C7C8CA</color>
+    <color name="primaryRed">#FF7171</color>
+    <color name="primaryRedAlpha">#CCFF7171</color>
+
+    <color name="secondaryColorDark">#938850</color>
+    <color name="secondaryColorLight">#FBE7A7</color>
+
+    <!--  입력 컴포넌트  -->
+    <color name="inputBorderColor">#DDDDDD</color>
+    <color name="inputHintColor">#BBBBBB</color>
+    <color name="inputBgColor">#000000</color>
+
+    <!--  버튼 컴포넌트  -->
+    <color name="buttonBorderColor">#BBBBBB</color>
+
+    <!--  바텀시트 컴포넌트  -->
+    <color name="bsItemBorderColor">#938850</color>
+    <color name="bsItemBgGray">#666666</color>
+    <color name="bsItemBgColor">#222222</color>
+    <color name="bsStartBgColor">#99444444</color>
+    <color name="bsEndBgColor">#99222222</color>
+
+    <!--  리사이클러 아이템 색상  -->
+    <color name="rvItemSubColor">#DDDDDD</color>
+    <color name="rvItemSelectedColor">#938850</color>
+    <color name="rvItemDisabledColor">#666666</color>
+    <color name="rvHeaderBgColor">#333333</color>
+    <color name="rvHeaderBorderColor">#BBBBBB</color>
+    <color name="rvItemBorderColor">#666666</color>
+
+    <!--  다이얼로그 색상  -->
+    <color name="dialogBorderColor">#BBBBBB</color>
+    <color name="dialogGradientStart">#444444</color>
+    <color name="dialogGradientEnd">#222222</color>
+    <color name="dialogCancelColor">#666666</color>
+</resources>

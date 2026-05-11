@@ -1,0 +1,387 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <LinearLayout
+        android:id="@+id/main"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:orientation="vertical"
+        tools:context=".view.main.MainActivity">
+
+        <com.github.util.ui.CustomTitleView
+            android:id="@+id/title_incident"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:itemTitleText="장애" />
+
+        <FrameLayout
+            android:id="@+id/content_incident"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1">
+
+            <androidx.core.widget.NestedScrollView
+                android:id="@+id/scroll_incident"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:clipToPadding="false"
+                android:fillViewport="true"
+                android:paddingBottom="112dp">
+
+                <LinearLayout
+                    android:id="@+id/container_incident"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:id="@+id/layout_incident_filter"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/rvItemSubColor"
+                        android:orientation="horizontal"
+                        android:padding="@dimen/padding_12dp">
+
+                        <TextView
+                            android:id="@+id/tv_incident_filter_all"
+                            android:layout_width="0dp"
+                            android:layout_height="48dp"
+                            android:layout_weight="1"
+                            android:background="@color/primaryGray"
+                            android:fontFamily="@font/pretendard_semibold"
+                            android:gravity="center"
+                            android:text="전체"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/content_18" />
+
+                        <TextView
+                            android:id="@+id/tv_incident_filter_in_progress"
+                            android:layout_width="0dp"
+                            android:layout_height="48dp"
+                            android:layout_marginStart="1dp"
+                            android:layout_weight="1"
+                            android:background="@color/white"
+                            android:fontFamily="@font/pretendard_semibold"
+                            android:gravity="center"
+                            android:text="진행중"
+                            android:textColor="@color/primaryBlack"
+                            android:textSize="@dimen/content_18" />
+
+                        <TextView
+                            android:id="@+id/tv_incident_filter_completed"
+                            android:layout_width="0dp"
+                            android:layout_height="48dp"
+                            android:layout_marginStart="1dp"
+                            android:layout_weight="1"
+                            android:background="@color/white"
+                            android:fontFamily="@font/pretendard_semibold"
+                            android:gravity="center"
+                            android:text="완료"
+                            android:textColor="@color/primaryBlack"
+                            android:textSize="@dimen/content_18" />
+
+                        <TextView
+                            android:id="@+id/tv_incident_filter_hold"
+                            android:layout_width="0dp"
+                            android:layout_height="48dp"
+                            android:layout_marginStart="1dp"
+                            android:layout_weight="1"
+                            android:background="@color/white"
+                            android:fontFamily="@font/pretendard_semibold"
+                            android:gravity="center"
+                            android:text="보류"
+                            android:textColor="@color/primaryBlack"
+                            android:textSize="@dimen/content_18" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/list_incident"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:padding="@dimen/padding_16dp">
+
+                        <com.google.android.material.card.MaterialCardView
+                            android:id="@+id/item_incident_server_down"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="@dimen/margin_12dp"
+                            app:cardBackgroundColor="@color/white"
+                            app:cardCornerRadius="6dp"
+                            app:cardElevation="1dp"
+                            app:strokeColor="@color/primaryLightGray"
+                            app:strokeWidth="1dp">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="92dp"
+                                android:gravity="center_vertical"
+                                android:orientation="horizontal"
+                                android:paddingHorizontal="@dimen/padding_16dp">
+
+                                <!-- TODO: 디자인 아이콘 리소스 확정 시 placeholder drawable 교체. -->
+                                <ImageView
+                                    android:id="@+id/iv_incident_server_icon"
+                                    android:layout_width="48dp"
+                                    android:layout_height="48dp"
+                                    android:contentDescription="장애"
+                                    android:src="@android:drawable/ic_dialog_alert"
+                                    android:tint="@color/primaryGray" />
+
+                                <LinearLayout
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="@dimen/margin_16dp"
+                                    android:layout_weight="1"
+                                    android:orientation="vertical">
+
+                                    <TextView
+                                        android:id="@+id/tv_incident_server_title"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:fontFamily="@font/pretendard_semibold"
+                                        android:text="서버 다운 문제"
+                                        android:textColor="@color/primaryBlack"
+                                        android:textSize="@dimen/content_20" />
+
+                                    <TextView
+                                        android:id="@+id/tv_incident_server_meta"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginTop="@dimen/margin_8dp"
+                                        android:text="2026-04-12   홍길동"
+                                        android:textColor="@color/primaryDarkGray"
+                                        android:textSize="@dimen/content_16" />
+                                </LinearLayout>
+
+                                <TextView
+                                    android:id="@+id/tv_incident_server_status"
+                                    android:layout_width="78dp"
+                                    android:layout_height="36dp"
+                                    android:background="@color/primaryGray"
+                                    android:fontFamily="@font/pretendard_semibold"
+                                    android:gravity="center"
+                                    android:text="진행중"
+                                    android:textColor="@color/white"
+                                    android:textSize="@dimen/content_16" />
+                            </LinearLayout>
+                        </com.google.android.material.card.MaterialCardView>
+
+                        <com.google.android.material.card.MaterialCardView
+                            android:id="@+id/item_incident_payment_error"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="@dimen/margin_12dp"
+                            app:cardBackgroundColor="@color/white"
+                            app:cardCornerRadius="6dp"
+                            app:cardElevation="1dp"
+                            app:strokeColor="@color/primaryLightGray"
+                            app:strokeWidth="1dp">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="92dp"
+                                android:gravity="center_vertical"
+                                android:orientation="horizontal"
+                                android:paddingHorizontal="@dimen/padding_16dp">
+
+                                <!-- TODO: 디자인 아이콘 리소스 확정 시 placeholder drawable 교체. -->
+                                <ImageView
+                                    android:id="@+id/iv_incident_payment_icon"
+                                    android:layout_width="48dp"
+                                    android:layout_height="48dp"
+                                    android:contentDescription="장애"
+                                    android:src="@android:drawable/ic_dialog_alert"
+                                    android:tint="@color/primaryGray" />
+
+                                <LinearLayout
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="@dimen/margin_16dp"
+                                    android:layout_weight="1"
+                                    android:orientation="vertical">
+
+                                    <TextView
+                                        android:id="@+id/tv_incident_payment_title"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:fontFamily="@font/pretendard_semibold"
+                                        android:text="결제 오류 발생"
+                                        android:textColor="@color/primaryBlack"
+                                        android:textSize="@dimen/content_20" />
+
+                                    <TextView
+                                        android:id="@+id/tv_incident_payment_meta"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginTop="@dimen/margin_8dp"
+                                        android:text="2026-04-10   김철수"
+                                        android:textColor="@color/primaryDarkGray"
+                                        android:textSize="@dimen/content_16" />
+                                </LinearLayout>
+
+                                <TextView
+                                    android:id="@+id/tv_incident_payment_status"
+                                    android:layout_width="78dp"
+                                    android:layout_height="36dp"
+                                    android:background="@color/primaryGray"
+                                    android:fontFamily="@font/pretendard_semibold"
+                                    android:gravity="center"
+                                    android:text="진행중"
+                                    android:textColor="@color/white"
+                                    android:textSize="@dimen/content_16" />
+                            </LinearLayout>
+                        </com.google.android.material.card.MaterialCardView>
+
+                        <com.google.android.material.card.MaterialCardView
+                            android:id="@+id/item_incident_database_error"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="@dimen/margin_12dp"
+                            app:cardBackgroundColor="@color/white"
+                            app:cardCornerRadius="6dp"
+                            app:cardElevation="1dp"
+                            app:strokeColor="@color/primaryLightGray"
+                            app:strokeWidth="1dp">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="92dp"
+                                android:gravity="center_vertical"
+                                android:orientation="horizontal"
+                                android:paddingHorizontal="@dimen/padding_16dp">
+
+                                <!-- TODO: 디자인 아이콘 리소스 확정 시 placeholder drawable 교체. -->
+                                <ImageView
+                                    android:id="@+id/iv_incident_database_icon"
+                                    android:layout_width="48dp"
+                                    android:layout_height="48dp"
+                                    android:contentDescription="장애"
+                                    android:src="@android:drawable/ic_dialog_alert"
+                                    android:tint="@color/primaryGray" />
+
+                                <LinearLayout
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="@dimen/margin_16dp"
+                                    android:layout_weight="1"
+                                    android:orientation="vertical">
+
+                                    <TextView
+                                        android:id="@+id/tv_incident_database_title"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:fontFamily="@font/pretendard_semibold"
+                                        android:text="데이터베이스 접근 불가"
+                                        android:textColor="@color/primaryBlack"
+                                        android:textSize="@dimen/content_20" />
+
+                                    <TextView
+                                        android:id="@+id/tv_incident_database_meta"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginTop="@dimen/margin_8dp"
+                                        android:text="2026-04-08   박민수"
+                                        android:textColor="@color/primaryDarkGray"
+                                        android:textSize="@dimen/content_16" />
+                                </LinearLayout>
+
+                                <TextView
+                                    android:id="@+id/tv_incident_database_status"
+                                    android:layout_width="78dp"
+                                    android:layout_height="36dp"
+                                    android:background="@color/primaryGray"
+                                    android:fontFamily="@font/pretendard_semibold"
+                                    android:gravity="center"
+                                    android:text="완료"
+                                    android:textColor="@color/white"
+                                    android:textSize="@dimen/content_16" />
+                            </LinearLayout>
+                        </com.google.android.material.card.MaterialCardView>
+
+                        <com.google.android.material.card.MaterialCardView
+                            android:id="@+id/item_incident_server_overload"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            app:cardBackgroundColor="@color/white"
+                            app:cardCornerRadius="6dp"
+                            app:cardElevation="1dp"
+                            app:strokeColor="@color/primaryLightGray"
+                            app:strokeWidth="1dp">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="92dp"
+                                android:gravity="center_vertical"
+                                android:orientation="horizontal"
+                                android:paddingHorizontal="@dimen/padding_16dp">
+
+                                <!-- TODO: 디자인 아이콘 리소스 확정 시 placeholder drawable 교체. -->
+                                <ImageView
+                                    android:id="@+id/iv_incident_overload_icon"
+                                    android:layout_width="48dp"
+                                    android:layout_height="48dp"
+                                    android:contentDescription="장애"
+                                    android:src="@android:drawable/ic_dialog_alert"
+                                    android:tint="@color/primaryGray" />
+
+                                <LinearLayout
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="@dimen/margin_16dp"
+                                    android:layout_weight="1"
+                                    android:orientation="vertical">
+
+                                    <TextView
+                                        android:id="@+id/tv_incident_overload_title"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:fontFamily="@font/pretendard_semibold"
+                                        android:text="서버 과부하"
+                                        android:textColor="@color/primaryBlack"
+                                        android:textSize="@dimen/content_20" />
+
+                                    <TextView
+                                        android:id="@+id/tv_incident_overload_meta"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginTop="@dimen/margin_8dp"
+                                        android:text="2026-04-06   이영희"
+                                        android:textColor="@color/primaryDarkGray"
+                                        android:textSize="@dimen/content_16" />
+                                </LinearLayout>
+
+                                <TextView
+                                    android:id="@+id/tv_incident_overload_status"
+                                    android:layout_width="78dp"
+                                    android:layout_height="36dp"
+                                    android:background="@color/primaryGray"
+                                    android:fontFamily="@font/pretendard_semibold"
+                                    android:gravity="center"
+                                    android:text="완료"
+                                    android:textColor="@color/white"
+                                    android:textSize="@dimen/content_16" />
+                            </LinearLayout>
+                        </com.google.android.material.card.MaterialCardView>
+                    </LinearLayout>
+                </LinearLayout>
+            </androidx.core.widget.NestedScrollView>
+
+            <!-- TODO: 디자인 아이콘 리소스 확정 시 placeholder drawable 교체. -->
+            <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:id="@+id/fab_incident_add"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom|end"
+                android:layout_marginEnd="@dimen/margin_24dp"
+                android:layout_marginBottom="@dimen/margin_24dp"
+                android:contentDescription="장애 등록"
+                app:backgroundTint="@color/primaryGray"
+                app:srcCompat="@android:drawable/ic_input_add"
+                app:tint="@color/white" />
+        </FrameLayout>
+    </LinearLayout>
+</layout>

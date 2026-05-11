@@ -1,0 +1,291 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <LinearLayout
+        android:id="@+id/main"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:orientation="vertical"
+        tools:context=".view.main.MainActivity">
+
+        <com.github.util.ui.CustomTitleView
+            android:id="@+id/title_search"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:itemTitleText="검색" />
+
+        <androidx.core.widget.NestedScrollView
+            android:id="@+id/scroll_search"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:fillViewport="true">
+
+            <LinearLayout
+                android:id="@+id/container_search"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:id="@+id/layout_search_input"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/rvItemSubColor"
+                    android:orientation="horizontal"
+                    android:padding="@dimen/padding_12dp">
+
+                    <LinearLayout
+                        android:id="@+id/box_search_keyword"
+                        android:layout_width="0dp"
+                        android:layout_height="52dp"
+                        android:layout_weight="1"
+                        android:background="@color/white"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal"
+                        android:paddingHorizontal="@dimen/padding_12dp">
+
+                        <!-- TODO: 디자인 아이콘 리소스 확정 시 placeholder drawable 교체. -->
+                        <ImageView
+                            android:id="@+id/iv_search_keyword_icon"
+                            android:layout_width="32dp"
+                            android:layout_height="32dp"
+                            android:contentDescription="검색"
+                            android:src="@android:drawable/ic_menu_search"
+                            android:tint="@color/primaryGray" />
+
+                        <EditText
+                            android:id="@+id/et_search_keyword"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_marginStart="@dimen/margin_8dp"
+                            android:layout_weight="1"
+                            android:background="@null"
+                            android:hint="검색어를 입력하세요"
+                            android:imeOptions="actionSearch"
+                            android:inputType="text"
+                            android:singleLine="true"
+                            android:textColor="@color/primaryBlack"
+                            android:textColorHint="@color/primaryGray"
+                            android:textSize="@dimen/content_18" />
+                    </LinearLayout>
+
+                    <Button
+                        android:id="@+id/btn_search_cancel"
+                        android:layout_width="96dp"
+                        android:layout_height="52dp"
+                        android:layout_marginStart="@dimen/margin_8dp"
+                        android:backgroundTint="@color/primaryGray"
+                        android:fontFamily="@font/pretendard_semibold"
+                        android:text="취소"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/content_18" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/list_search_result"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:id="@+id/item_search_incident_server"
+                        android:layout_width="match_parent"
+                        android:layout_height="92dp"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal"
+                        android:paddingHorizontal="@dimen/padding_16dp">
+
+                        <!-- TODO: 디자인 아이콘 리소스 확정 시 placeholder drawable 교체. -->
+                        <ImageView
+                            android:id="@+id/iv_search_incident_server_icon"
+                            android:layout_width="48dp"
+                            android:layout_height="48dp"
+                            android:contentDescription="장애"
+                            android:src="@android:drawable/ic_dialog_alert"
+                            android:tint="@color/primaryGray" />
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/margin_16dp"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/tv_search_incident_server_title"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/pretendard_semibold"
+                                android:text="서버 다운 문제"
+                                android:textColor="@color/primaryBlack"
+                                android:textSize="@dimen/content_20" />
+
+                            <TextView
+                                android:id="@+id/tv_search_incident_server_meta"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/margin_8dp"
+                                android:text="장애   2026-04-12   홍길동"
+                                android:textColor="@color/primaryDarkGray"
+                                android:textSize="@dimen/content_16" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginStart="80dp"
+                        android:background="@color/primaryLightGray" />
+
+                    <LinearLayout
+                        android:id="@+id/item_search_request_login"
+                        android:layout_width="match_parent"
+                        android:layout_height="92dp"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal"
+                        android:paddingHorizontal="@dimen/padding_16dp">
+
+                        <!-- TODO: 디자인 아이콘 리소스 확정 시 placeholder drawable 교체. -->
+                        <ImageView
+                            android:id="@+id/iv_search_request_login_icon"
+                            android:layout_width="48dp"
+                            android:layout_height="48dp"
+                            android:contentDescription="요청사항"
+                            android:src="@android:drawable/ic_menu_edit"
+                            android:tint="@color/primaryGray" />
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/margin_16dp"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/tv_search_request_login_title"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/pretendard_semibold"
+                                android:text="로그인 문제 발생"
+                                android:textColor="@color/primaryBlack"
+                                android:textSize="@dimen/content_20" />
+
+                            <TextView
+                                android:id="@+id/tv_search_request_login_meta"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/margin_8dp"
+                                android:text="요청사항   2026-04-12   홍길동"
+                                android:textColor="@color/primaryDarkGray"
+                                android:textSize="@dimen/content_16" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginStart="80dp"
+                        android:background="@color/primaryLightGray" />
+
+                    <LinearLayout
+                        android:id="@+id/item_search_request_payment"
+                        android:layout_width="match_parent"
+                        android:layout_height="92dp"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal"
+                        android:paddingHorizontal="@dimen/padding_16dp">
+
+                        <!-- TODO: 디자인 아이콘 리소스 확정 시 placeholder drawable 교체. -->
+                        <ImageView
+                            android:id="@+id/iv_search_request_payment_icon"
+                            android:layout_width="48dp"
+                            android:layout_height="48dp"
+                            android:contentDescription="요청사항"
+                            android:src="@android:drawable/ic_menu_edit"
+                            android:tint="@color/primaryGray" />
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/margin_16dp"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/tv_search_request_payment_title"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/pretendard_semibold"
+                                android:text="결제 시스템 오류"
+                                android:textColor="@color/primaryBlack"
+                                android:textSize="@dimen/content_20" />
+
+                            <TextView
+                                android:id="@+id/tv_search_request_payment_meta"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/margin_8dp"
+                                android:text="요청사항   2026-04-11   김철수"
+                                android:textColor="@color/primaryDarkGray"
+                                android:textSize="@dimen/content_16" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginStart="80dp"
+                        android:background="@color/primaryLightGray" />
+
+                    <LinearLayout
+                        android:id="@+id/item_search_incident_database"
+                        android:layout_width="match_parent"
+                        android:layout_height="92dp"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal"
+                        android:paddingHorizontal="@dimen/padding_16dp">
+
+                        <!-- TODO: 디자인 아이콘 리소스 확정 시 placeholder drawable 교체. -->
+                        <ImageView
+                            android:id="@+id/iv_search_incident_database_icon"
+                            android:layout_width="48dp"
+                            android:layout_height="48dp"
+                            android:contentDescription="장애"
+                            android:src="@android:drawable/ic_dialog_alert"
+                            android:tint="@color/primaryGray" />
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/margin_16dp"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/tv_search_incident_database_title"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/pretendard_semibold"
+                                android:text="데이터베이스 접근 불가"
+                                android:textColor="@color/primaryBlack"
+                                android:textSize="@dimen/content_20" />
+
+                            <TextView
+                                android:id="@+id/tv_search_incident_database_meta"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/margin_8dp"
+                                android:text="장애   2026-04-08   박민수"
+                                android:textColor="@color/primaryDarkGray"
+                                android:textSize="@dimen/content_16" />
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+        </androidx.core.widget.NestedScrollView>
+    </LinearLayout>
+</layout>

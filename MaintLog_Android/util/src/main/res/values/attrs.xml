@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="OutLineTextView">
+        <attr name="textStrokeWidth" format="float" />
+        <attr name="textStrokeColor" format="color" />
+    </declare-styleable>
+
+    <declare-styleable name="CustomTitleViewData">
+        <attr name="itemTitleText" format="string|reference"/>
+        <attr name="onBackClick" format="string" />
+    </declare-styleable>
+
+    <declare-styleable name="CustomShimmerData">
+        <attr name="shimmerDuration" format="float"/>
+        <attr name="baseColor" format="color"/>
+        <attr name="highlightColor" format="color" />
+    </declare-styleable>
+
+    <declare-styleable name="LayoutData">
+        <attr name="touchViewId" format="reference" />
+    </declare-styleable>
+
+</resources>

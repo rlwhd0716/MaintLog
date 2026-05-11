@@ -1,17 +1,17 @@
 plugins {
     alias(libs.plugins.android.library)
+    alias(libs.plugins.kotlin.plugin)
+    alias(libs.plugins.parcelize.plugin)
+    alias(libs.plugins.hilt.plugin)
+    alias(libs.plugins.ksp.plugin)
 }
 
 android {
-    namespace = "com.github.maintlog.domain"
-    compileSdk {
-        version = release(36) {
-            minorApiLevel = 1
-        }
-    }
+    namespace = "com.github.domain"
+    compileSdk = rootProject.extra["currentSdk"] as Int
 
     defaultConfig {
-        minSdk = 26
+        minSdk = rootProject.extra["minSdk"] as Int
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
         consumerProguardFiles("consumer-rules.pro")
@@ -27,16 +27,27 @@ android {
         }
     }
     compileOptions {
-        sourceCompatibility = JavaVersion.VERSION_11
-        targetCompatibility = JavaVersion.VERSION_11
+        sourceCompatibility = rootProject.extra["JDK-Version"] as JavaVersion
+        targetCompatibility = rootProject.extra["JDK-Version"] as JavaVersion
+    }
+    kotlinOptions {
+        jvmTarget = rootProject.extra["JDK-Target"] as String
     }
 }
 
 dependencies {
-    implementation(libs.androidx.core.ktx)
-    implementation(libs.androidx.appcompat)
-    implementation(libs.material)
-    testImplementation(libs.junit)
-    androidTestImplementation(libs.androidx.junit)
-    androidTestImplementation(libs.androidx.espresso.core)
+    implementation(project(mapOf("path" to ":util")))
+
+    // project default
+    implementation(libs.bundles.ui)
+    testImplementation(libs.test.junit)
+    androidTestImplementation(libs.android.test.junit)
+    androidTestImplementation(libs.android.test.core)
+
+    // hilt
+    implementation(libs.hilt.android)
+    ksp(libs.hilt.compiler)
+
+    // Retrofit, Okhttp, gson
+    implementation(libs.bundles.retrofit)
 }

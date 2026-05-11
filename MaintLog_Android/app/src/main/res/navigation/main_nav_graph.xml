@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/main_nav_graph"
+    app:startDestination="@id/homeFragment">
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.github.maintlog_android.view.main.nav.HomeFragment"
+        android:label="home" />
+
+    <fragment
+        android:id="@+id/requestFragment"
+        android:name="com.github.maintlog_android.view.main.nav.RequestFragment"
+        android:label="request" />
+
+    <fragment
+        android:id="@+id/incidentFragment"
+        android:name="com.github.maintlog_android.view.main.nav.IncidentFragment"
+        android:label="incident" />
+
+    <fragment
+        android:id="@+id/searchFragment"
+        android:name="com.github.maintlog_android.view.main.nav.SearchFragment"
+        android:label="search" />
+
+    <fragment
+        android:id="@+id/settingFragment"
+        android:name="com.github.maintlog_android.view.main.nav.SettingFragment"
+        android:label="setting" />
+
+</navigation>

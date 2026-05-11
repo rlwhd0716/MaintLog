@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="Theme.WebviewDialog" parent="Theme.MaterialComponents.Light.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="android:windowFullscreen">false</item>
+    </style>
+
+    <style name="Dialog" />
+
+    <style name="Dialog.ShimmerFrame">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">0dp</item>
+    </style>
+
+    <style name="Dialog.ShimmerContainer">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:background">@drawable/dialog_comm_bg</item>
+    </style>
+
+    <style name="Dialog.Container">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_gravity">center</item>
+        <item name="android:background">@drawable/dialog_comm_bg</item>
+        <item name="android:orientation">vertical</item>
+        <item name="android:layout_margin">1dp</item>
+        <item name="android:padding">@dimen/dialog_container_padding</item>
+    </style>
+
+    <style name="Dialog.Title">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/primaryColor</item>
+        <item name="android:textSize">@dimen/dialog_title_text_size</item>
+        <item name="android:layout_margin">8dp</item>
+        <item name="android:fontFamily">@font/pretendard_semibold</item>
+    </style>
+
+    <style name="Dialog.Contents">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">@dimen/dialog_contents_text_size</item>
+        <item name="android:layout_margin">8dp</item>
+        <item name="android:fontFamily">@font/pretendard_medium</item>
+    </style>
+
+    <style name="Dialog.Contents.Padding">
+        <item name="android:paddingBottom">@dimen/padding_24dp</item>
+    </style>
+
+    <style name="Dialog.InputLayout" parent="Widget.Material3.TextInputLayout.OutlinedBox">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColorHint">@color/inputHintColor</item> <!-- 텍스트 박스 내 힌트(큰글씨)-->
+        <item name="boxBackgroundColor">@color/inputBgColor</item>
+        <item name="boxStrokeColor">@color/primaryColor</item>
+        <item name="hintTextColor">@color/inputHintColor</item> <!-- 텍스트 박스 위 힌트(작은글씨) -->
+        <item name="cursorColor">@color/primaryColor</item>
+        <item name="endIconMode">clear_text</item>
+        <item name="endIconTint">@color/white</item>
+        <item name="android:layout_margin">@dimen/dialog_component_margin</item>
+    </style>
+
+    <style name="Dialog.InputEditText" parent="Widget.Material3.TextInputEditText.OutlinedBox">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:imeOptions">actionDone</item>
+        <item name="android:inputType">text</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">@dimen/dialog_contents_inputText_size</item>
+    </style>
+
+    <style name="Dialog.Bottom"/>
+    <style name="Dialog.Bottom.Container">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:gravity">end</item>
+        <item name="android:orientation">horizontal</item>
+        <item name="android:layout_margin">@dimen/dialog_component_margin</item>
+    </style>
+
+    <style name="Dialog.Bottom.Button">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">@dimen/dialog_button_height</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textSize">@dimen/dialog_button_text_size</item>
+        <item name="rippleColor">@color/white</item>
+    </style>
+
+    <style name="Dialog.Bottom.ButtonAllow" parent="Dialog.Bottom.Button">
+        <item name="android:textColor">@color/primaryBlack</item>
+        <item name="android:layout_marginStart">4dp</item>
+        <item name="backgroundTint">@color/primaryColor</item>
+    </style>
+
+    <style name="Dialog.Bottom.ButtonCancel" parent="Dialog.Bottom.Button">
+        <item name="android:textColor">@color/white</item>
+        <item name="android:layout_marginEnd">4dp</item>
+        <item name="backgroundTint">@color/dialogCancelColor</item>
+    </style>
+</resources>

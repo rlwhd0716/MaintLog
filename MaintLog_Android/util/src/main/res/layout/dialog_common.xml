@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <import type="android.view.View" />
+
+        <variable
+            name="title"
+            type="String" />
+
+        <variable
+            name="message"
+            type="String" />
+
+        <variable
+            name="ok"
+            type="String" />
+
+        <variable
+            name="positive"
+            type="android.view.View.OnClickListener" />
+
+        <variable
+            name="cancel"
+            type="String" />
+
+        <variable
+            name="negative"
+            type="android.view.View.OnClickListener" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <com.github.util.ui.CustomShimmer
+            android:id="@+id/shimmer_container"
+            style="@style/Dialog.ShimmerFrame"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <LinearLayout style="@style/Dialog.ShimmerContainer"/>
+        </com.github.util.ui.CustomShimmer>
+
+        <LinearLayout
+            android:id="@+id/ll_dialog_common"
+            style="@style/Dialog.Container"
+            android:layout_margin="1dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                style="@style/Dialog.Title"
+                android:text="@{title}"
+                tools:text="Custom Dialog" />
+
+            <TextView
+                style="@style/Dialog.Contents.Padding"
+                android:text="@{message}"
+                tools:text="Custom Dialog Content Message" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <com.google.android.material.button.MaterialButton
+                    style="@style/Dialog.Bottom.ButtonCancel"
+                    android:layout_margin="@dimen/margin_8dp"
+                    android:onClick="@{negative}"
+                    android:text="@{cancel}"
+                    android:visibility="@{(cancel != null) ? View.VISIBLE : View.GONE}" />
+
+                <com.google.android.material.button.MaterialButton
+                    style="@style/Dialog.Bottom.ButtonAllow"
+                    android:layout_margin="@dimen/margin_8dp"
+                    android:onClick="@{positive}"
+                    android:text="@{ok}"
+                    android:visibility="@{(ok != null) ? View.VISIBLE : View.GONE}" />
+            </LinearLayout>
+
+        </LinearLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
