@@ -1,0 +1,243 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <LinearLayout
+        android:id="@+id/main"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:orientation="vertical"
+        tools:context=".view.incident.form.IncidentFormFragment">
+
+        <com.github.util.ui.CustomTitleView
+            android:id="@+id/title_incident_form"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:itemTitleText="@string/title_incident_form"
+            app:onBackClick="onTitleBackClick" />
+
+        <androidx.core.widget.NestedScrollView
+            android:id="@+id/scroll_incident_form"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:fillViewport="true">
+
+            <LinearLayout
+                android:id="@+id/container_incident_form"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="@dimen/padding_16dp">
+
+                <TextView
+                    android:id="@+id/tv_incident_form_title_label"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/pretendard_semibold"
+                    android:text="@string/label_title"
+                    android:textColor="@color/primaryBlack"
+                    android:textSize="@dimen/content_20" />
+
+                <EditText
+                    android:id="@+id/et_incident_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="56dp"
+                    android:layout_marginTop="@dimen/margin_12dp"
+                    android:backgroundTint="@color/primaryLightGray"
+                    android:hint="서버 다운 문제"
+                    android:inputType="text"
+                    android:paddingHorizontal="@dimen/padding_12dp"
+                    android:singleLine="true"
+                    android:textColor="@color/primaryBlack"
+                    android:textColorHint="@color/primaryGray"
+                    android:textSize="@dimen/content_18" />
+
+                <TextView
+                    android:id="@+id/tv_incident_form_status_label"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_24dp"
+                    android:fontFamily="@font/pretendard_semibold"
+                    android:text="@string/label_status"
+                    android:textColor="@color/primaryBlack"
+                    android:textSize="@dimen/content_20" />
+
+                <TextView
+                    android:id="@+id/tv_incident_form_status"
+                    android:layout_width="110dp"
+                    android:layout_height="48dp"
+                    android:layout_marginTop="@dimen/margin_12dp"
+                    android:background="@color/rvItemSubColor"
+                    android:fontFamily="@font/pretendard_semibold"
+                    android:gravity="center"
+                    android:text="진행중  ▼"
+                    android:textColor="@color/primaryBlack"
+                    android:textSize="@dimen/content_18" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="@dimen/margin_20dp"
+                    android:background="@color/primaryLightGray" />
+
+                <TextView
+                    android:id="@+id/tv_incident_form_reporter_label"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_20dp"
+                    android:fontFamily="@font/pretendard_semibold"
+                    android:text="@string/label_reporter"
+                    android:textColor="@color/primaryBlack"
+                    android:textSize="@dimen/content_20" />
+
+                <EditText
+                    android:id="@+id/et_incident_reporter"
+                    android:layout_width="match_parent"
+                    android:layout_height="56dp"
+                    android:layout_marginTop="@dimen/margin_12dp"
+                    android:backgroundTint="@color/primaryLightGray"
+                    android:hint="홍길동"
+                    android:inputType="textPersonName"
+                    android:paddingHorizontal="@dimen/padding_12dp"
+                    android:singleLine="true"
+                    android:textColor="@color/primaryBlack"
+                    android:textColorHint="@color/primaryGray"
+                    android:textSize="@dimen/content_18" />
+
+                <TextView
+                    android:id="@+id/tv_incident_form_severity_label"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_24dp"
+                    android:fontFamily="@font/pretendard_semibold"
+                    android:text="@string/label_severity"
+                    android:textColor="@color/primaryBlack"
+                    android:textSize="@dimen/content_20" />
+
+                <TextView
+                    android:id="@+id/tv_incident_form_severity"
+                    android:layout_width="96dp"
+                    android:layout_height="48dp"
+                    android:layout_marginTop="@dimen/margin_12dp"
+                    android:background="@color/rvItemSubColor"
+                    android:fontFamily="@font/pretendard_semibold"
+                    android:gravity="center"
+                    android:text="높음  ▼"
+                    android:textColor="@color/primaryBlack"
+                    android:textSize="@dimen/content_18" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="8dp"
+                    android:layout_marginHorizontal="-16dp"
+                    android:layout_marginTop="@dimen/margin_24dp"
+                    android:background="@color/rvItemSubColor" />
+
+                <TextView
+                    android:id="@+id/tv_incident_form_description_label"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_24dp"
+                    android:fontFamily="@font/pretendard_semibold"
+                    android:text="@string/label_incident_content"
+                    android:textColor="@color/primaryBlack"
+                    android:textSize="@dimen/content_20" />
+
+                <EditText
+                    android:id="@+id/et_incident_description"
+                    android:layout_width="match_parent"
+                    android:layout_height="120dp"
+                    android:layout_marginTop="@dimen/margin_12dp"
+                    android:backgroundTint="@color/primaryLightGray"
+                    android:gravity="top"
+                    android:hint="서버가 다운되어 서비스 접속 불가 상태"
+                    android:inputType="textMultiLine"
+                    android:padding="@dimen/padding_12dp"
+                    android:textColor="@color/primaryBlack"
+                    android:textColorHint="@color/primaryGray"
+                    android:textSize="@dimen/content_18" />
+
+                <TextView
+                    android:id="@+id/tv_incident_form_cause_label"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_24dp"
+                    android:fontFamily="@font/pretendard_semibold"
+                    android:text="@string/label_cause"
+                    android:textColor="@color/primaryBlack"
+                    android:textSize="@dimen/content_20" />
+
+                <EditText
+                    android:id="@+id/et_incident_cause"
+                    android:layout_width="match_parent"
+                    android:layout_height="56dp"
+                    android:layout_marginTop="@dimen/margin_12dp"
+                    android:backgroundTint="@color/primaryLightGray"
+                    android:hint="서버 프로세스 비정상 종료"
+                    android:inputType="text"
+                    android:paddingHorizontal="@dimen/padding_12dp"
+                    android:singleLine="true"
+                    android:textColor="@color/primaryBlack"
+                    android:textColorHint="@color/primaryGray"
+                    android:textSize="@dimen/content_18" />
+
+                <TextView
+                    android:id="@+id/tv_incident_form_impact_label"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_24dp"
+                    android:fontFamily="@font/pretendard_semibold"
+                    android:text="@string/label_impact_scope"
+                    android:textColor="@color/primaryBlack"
+                    android:textSize="@dimen/content_20" />
+
+                <EditText
+                    android:id="@+id/et_incident_impact_scope"
+                    android:layout_width="match_parent"
+                    android:layout_height="56dp"
+                    android:layout_marginTop="@dimen/margin_12dp"
+                    android:backgroundTint="@color/primaryLightGray"
+                    android:hint="전체 사용자 접속 지연"
+                    android:inputType="text"
+                    android:paddingHorizontal="@dimen/padding_12dp"
+                    android:singleLine="true"
+                    android:textColor="@color/primaryBlack"
+                    android:textColorHint="@color/primaryGray"
+                    android:textSize="@dimen/content_18" />
+
+                <LinearLayout
+                    android:id="@+id/layout_incident_form_actions"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_24dp"
+                    android:gravity="end"
+                    android:orientation="horizontal">
+
+                    <Button
+                        android:id="@+id/btn_incident_form_cancel"
+                        android:layout_width="120dp"
+                        android:layout_height="52dp"
+                        android:backgroundTint="@color/white"
+                        android:fontFamily="@font/pretendard_semibold"
+                        android:text="@string/action_cancel"
+                        android:textColor="@color/primaryBlack"
+                        android:textSize="@dimen/content_18" />
+
+                    <Button
+                        android:id="@+id/btn_incident_form_save"
+                        android:layout_width="120dp"
+                        android:layout_height="52dp"
+                        android:layout_marginStart="@dimen/margin_12dp"
+                        android:backgroundTint="@color/primaryGray"
+                        android:fontFamily="@font/pretendard_semibold"
+                        android:text="@string/action_save"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/content_18" />
+                </LinearLayout>
+            </LinearLayout>
+        </androidx.core.widget.NestedScrollView>
+    </LinearLayout>
+</layout>

@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <LinearLayout
+        android:id="@+id/main"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:orientation="vertical"
+        tools:context=".view.request.detail.RequestDetailFragment">
+
+        <com.github.util.ui.CustomTitleView
+            android:id="@+id/title_request_detail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:itemTitleText="@string/title_request_detail"
+            app:onBackClick="onTitleBackClick" />
+
+        <androidx.core.widget.NestedScrollView
+            android:id="@+id/scroll_request_detail"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:fillViewport="true">
+
+            <LinearLayout
+                android:id="@+id/container_request_detail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:id="@+id/section_request_detail_header"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="@dimen/padding_16dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/tv_request_detail_title"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:fontFamily="@font/pretendard_semibold"
+                            android:text="로그인 문제 발생"
+                            android:textColor="@color/primaryBlack"
+                            android:textSize="@dimen/content_24" />
+
+                        <!-- TODO: 디자인 아이콘 리소스 확정 시 placeholder drawable 교체. -->
+                        <Button
+                            android:id="@+id/btn_request_detail_edit"
+                            android:layout_width="52dp"
+                            android:layout_height="44dp"
+                            android:backgroundTint="@color/white"
+                            android:contentDescription="요청 수정"
+                            android:drawableTop="@android:drawable/ic_menu_edit"
+                            android:drawableTint="@color/primaryGray"
+                            android:text="" />
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/tv_request_detail_status"
+                        android:layout_width="96dp"
+                        android:layout_height="40dp"
+                        android:layout_marginTop="@dimen/margin_12dp"
+                        android:background="@color/primaryGray"
+                        android:fontFamily="@font/pretendard_semibold"
+                        android:gravity="center"
+                        android:text="진행중  ▼"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/content_16" />
+
+                    <TextView
+                        android:id="@+id/tv_request_detail_requester"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/margin_20dp"
+                        android:text="요청자 :   홍길동"
+                        android:textColor="@color/primaryBlack"
+                        android:textSize="@dimen/content_16" />
+
+                    <TextView
+                        android:id="@+id/tv_request_detail_priority"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/margin_12dp"
+                        android:text="우선순위 :   높음"
+                        android:textColor="@color/primaryBlack"
+                        android:textSize="@dimen/content_16" />
+
+                    <TextView
+                        android:id="@+id/tv_request_detail_created_at"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/margin_12dp"
+                        android:text="등록일 :   2026-04-12"
+                        android:textColor="@color/primaryBlack"
+                        android:textSize="@dimen/content_16" />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="8dp"
+                    android:background="@color/rvItemSubColor" />
+
+                <LinearLayout
+                    android:id="@+id/section_request_detail_content"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="@dimen/padding_16dp">
+
+                    <TextView
+                        android:id="@+id/tv_request_content_title"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/pretendard_semibold"
+                        android:text="@string/label_request_content"
+                        android:textColor="@color/primaryBlack"
+                        android:textSize="@dimen/content_20" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginTop="@dimen/margin_12dp"
+                        android:background="@color/primaryLightGray" />
+
+                    <TextView
+                        android:id="@+id/tv_request_detail_description"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/margin_16dp"
+                        android:lineSpacingExtra="6dp"
+                        android:text="로그인 시도하면 오류 메시지가 표시되고\n로그인 불가능한 상태입니다."
+                        android:textColor="@color/primaryBlack"
+                        android:textSize="@dimen/content_18" />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="8dp"
+                    android:background="@color/rvItemSubColor" />
+
+                <LinearLayout
+                    android:id="@+id/section_request_logs"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="@dimen/padding_16dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/tv_request_log_title"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:fontFamily="@font/pretendard_semibold"
+                            android:text="@string/label_request_log"
+                            android:textColor="@color/primaryBlack"
+                            android:textSize="@dimen/content_20" />
+
+                        <!-- TODO: 로그 추가 전용 화면 연결 시 동작 교체. -->
+                        <Button
+                            android:id="@+id/btn_request_log_add"
+                            android:layout_width="120dp"
+                            android:layout_height="44dp"
+                            android:backgroundTint="@color/primaryGray"
+                            android:drawableStart="@android:drawable/ic_input_add"
+                            android:drawableTint="@color/white"
+                            android:fontFamily="@font/pretendard_semibold"
+                            android:text="@string/action_add_log"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/content_14" />
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginTop="@dimen/margin_12dp"
+                        android:background="@color/primaryLightGray" />
+
+                    <TextView
+                        android:id="@+id/tv_request_log_status_changed"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/margin_16dp"
+                        android:lineSpacingExtra="6dp"
+                        android:text="2026-04-13   상태 변경  →  진행중\n조치 상태를 진행중으로 변경함."
+                        android:textColor="@color/primaryBlack"
+                        android:textSize="@dimen/content_16" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginTop="@dimen/margin_16dp"
+                        android:background="@color/primaryLightGray" />
+
+                    <TextView
+                        android:id="@+id/tv_request_log_analysis"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/margin_16dp"
+                        android:lineSpacingExtra="6dp"
+                        android:text="2026-04-13   원인 분석\n로그인 인증 모듈에서 오류 발견, 해결방법 모색 중."
+                        android:textColor="@color/primaryBlack"
+                        android:textSize="@dimen/content_16" />
+                </LinearLayout>
+            </LinearLayout>
+        </androidx.core.widget.NestedScrollView>
+    </LinearLayout>
+</layout>

@@ -1,9 +1,6 @@
 package com.github.maintlog_android.view.main
 
 import android.os.Bundle
-import androidx.activity.enableEdgeToEdge
-import androidx.core.view.ViewCompat
-import androidx.core.view.WindowInsetsCompat
 import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.ui.setupWithNavController
 import com.github.maintlog_android.R
@@ -17,18 +14,21 @@ class MainActivity : BaseActivity<ActivityMainBinding, MainViewModel>(R.layout.a
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
-
         initBottomNavigation()
     }
 
     private fun initBottomNavigation() {
+        binding?.bottomNavigation?.setupWithNavController(getNavHostFragment().navController)
+    }
 
-        val navHostFragment =
-            supportFragmentManager.findFragmentById(R.id.nav_host_fragment)
-                    as NavHostFragment
+    fun onTitleBackClick() {
+        val navController = getNavHostFragment().navController
+        if (!navController.navigateUp()) {
+            finish()
+        }
+    }
 
-        val navController = navHostFragment.navController
-
-        binding?.bottomNavigation?.setupWithNavController(navController)
+    private fun getNavHostFragment(): NavHostFragment {
+        return supportFragmentManager.findFragmentById(R.id.nav_host_fragment) as NavHostFragment
     }
 }

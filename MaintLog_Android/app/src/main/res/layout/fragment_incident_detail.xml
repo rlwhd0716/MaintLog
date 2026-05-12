@@ -1,0 +1,281 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <LinearLayout
+        android:id="@+id/main"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:orientation="vertical"
+        tools:context=".view.incident.detail.IncidentDetailFragment">
+
+        <com.github.util.ui.CustomTitleView
+            android:id="@+id/title_incident_detail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:itemTitleText="@string/title_incident_detail"
+            app:onBackClick="onTitleBackClick" />
+
+        <androidx.core.widget.NestedScrollView
+            android:id="@+id/scroll_incident_detail"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:fillViewport="true">
+
+            <LinearLayout
+                android:id="@+id/container_incident_detail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:id="@+id/section_incident_detail_header"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="@dimen/padding_16dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <!-- TODO: 디자인 아이콘 리소스 확정 시 placeholder drawable 교체. -->
+                        <ImageView
+                            android:id="@+id/iv_incident_detail_icon"
+                            android:layout_width="44dp"
+                            android:layout_height="44dp"
+                            android:contentDescription="장애"
+                            android:src="@android:drawable/ic_dialog_alert"
+                            android:tint="@color/primaryGray" />
+
+                        <TextView
+                            android:id="@+id/tv_incident_detail_title"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/margin_16dp"
+                            android:layout_weight="1"
+                            android:fontFamily="@font/pretendard_semibold"
+                            android:text="서버 다운 문제"
+                            android:textColor="@color/primaryBlack"
+                            android:textSize="@dimen/content_24" />
+
+                        <!-- TODO: 디자인 아이콘 리소스 확정 시 placeholder drawable 교체. -->
+                        <Button
+                            android:id="@+id/btn_incident_detail_edit"
+                            android:layout_width="52dp"
+                            android:layout_height="44dp"
+                            android:backgroundTint="@color/white"
+                            android:contentDescription="장애 수정"
+                            android:drawableTop="@android:drawable/ic_menu_edit"
+                            android:drawableTint="@color/primaryGray"
+                            android:text="" />
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/tv_incident_detail_status"
+                        android:layout_width="96dp"
+                        android:layout_height="40dp"
+                        android:layout_marginStart="60dp"
+                        android:layout_marginTop="@dimen/margin_12dp"
+                        android:background="@color/primaryGray"
+                        android:fontFamily="@font/pretendard_semibold"
+                        android:gravity="center"
+                        android:text="진행중  ▼"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/content_16" />
+
+                    <TextView
+                        android:id="@+id/tv_incident_detail_reporter"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/margin_20dp"
+                        android:text="등록자 :   홍길동"
+                        android:textColor="@color/primaryBlack"
+                        android:textSize="@dimen/content_16" />
+
+                    <TextView
+                        android:id="@+id/tv_incident_detail_severity"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/margin_12dp"
+                        android:text="중요도 :   높음"
+                        android:textColor="@color/primaryBlack"
+                        android:textSize="@dimen/content_16" />
+
+                    <TextView
+                        android:id="@+id/tv_incident_detail_occurred_at"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/margin_12dp"
+                        android:text="발생일 :   2026-04-12 08:23"
+                        android:textColor="@color/primaryBlack"
+                        android:textSize="@dimen/content_16" />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="8dp"
+                    android:background="@color/rvItemSubColor" />
+
+                <LinearLayout
+                    android:id="@+id/section_incident_detail_content"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="@dimen/padding_16dp">
+
+                    <TextView
+                        android:id="@+id/tv_incident_content_title"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/pretendard_semibold"
+                        android:text="@string/label_incident_content"
+                        android:textColor="@color/primaryBlack"
+                        android:textSize="@dimen/content_20" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginTop="@dimen/margin_12dp"
+                        android:background="@color/primaryLightGray" />
+
+                    <TextView
+                        android:id="@+id/tv_incident_detail_description"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/margin_16dp"
+                        android:lineSpacingExtra="6dp"
+                        android:text="서버가 다운되어 서비스 접속 불가 상태"
+                        android:textColor="@color/primaryBlack"
+                        android:textSize="@dimen/content_18" />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="8dp"
+                    android:background="@color/rvItemSubColor" />
+
+                <LinearLayout
+                    android:id="@+id/section_incident_cause_impact"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="@dimen/padding_16dp">
+
+                    <TextView
+                        android:id="@+id/tv_incident_cause_impact_title"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/pretendard_semibold"
+                        android:text="원인 / 영향 범위"
+                        android:textColor="@color/primaryBlack"
+                        android:textSize="@dimen/content_20" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginTop="@dimen/margin_12dp"
+                        android:background="@color/primaryLightGray" />
+
+                    <TextView
+                        android:id="@+id/tv_incident_detail_cause"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/margin_16dp"
+                        android:text="원인 : 서버 프로세스 비정상 종료"
+                        android:textColor="@color/primaryBlack"
+                        android:textSize="@dimen/content_18" />
+
+                    <TextView
+                        android:id="@+id/tv_incident_detail_impact"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/margin_12dp"
+                        android:text="영향 : 전체 사용자 접속 지연"
+                        android:textColor="@color/primaryBlack"
+                        android:textSize="@dimen/content_18" />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="8dp"
+                    android:background="@color/rvItemSubColor" />
+
+                <LinearLayout
+                    android:id="@+id/section_incident_logs"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="@dimen/padding_16dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/tv_incident_log_title"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:fontFamily="@font/pretendard_semibold"
+                            android:text="@string/label_incident_log"
+                            android:textColor="@color/primaryBlack"
+                            android:textSize="@dimen/content_20" />
+
+                        <!-- TODO: 조치 로그 추가 전용 화면 연결 시 동작 교체. -->
+                        <Button
+                            android:id="@+id/btn_incident_log_add"
+                            android:layout_width="120dp"
+                            android:layout_height="44dp"
+                            android:backgroundTint="@color/primaryGray"
+                            android:drawableStart="@android:drawable/ic_input_add"
+                            android:drawableTint="@color/white"
+                            android:fontFamily="@font/pretendard_semibold"
+                            android:text="@string/action_add_log"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/content_14" />
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginTop="@dimen/margin_12dp"
+                        android:background="@color/primaryLightGray" />
+
+                    <TextView
+                        android:id="@+id/tv_incident_log_status_changed"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/margin_16dp"
+                        android:lineSpacingExtra="6dp"
+                        android:text="2026-04-13   상태 변경  →  조치중\n상태를 조치중으로 변경함."
+                        android:textColor="@color/primaryBlack"
+                        android:textSize="@dimen/content_16" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginTop="@dimen/margin_16dp"
+                        android:background="@color/primaryLightGray" />
+
+                    <TextView
+                        android:id="@+id/tv_incident_log_reboot"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/margin_16dp"
+                        android:lineSpacingExtra="6dp"
+                        android:text="2026-04-13   재부팅\n서버 재부팅 후 점검 중, 문제 지속 발생"
+                        android:textColor="@color/primaryBlack"
+                        android:textSize="@dimen/content_16" />
+                </LinearLayout>
+            </LinearLayout>
+        </androidx.core.widget.NestedScrollView>
+    </LinearLayout>
+</layout>

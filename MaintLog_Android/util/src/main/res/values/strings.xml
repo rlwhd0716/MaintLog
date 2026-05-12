@@ -12,6 +12,13 @@
     <string name="msg_error_network_connection_1">네트워크 통신에 문제가 발생하였습니다.</string>
     <string name="msg_error_network_connection_2">네트워크 통신에 기타 장애 발생하였습니다.</string>
 
+    <string name="title_disaster_emergency">구급</string>
+    <string name="title_disaster_incident">사건</string>
+    <string name="title_disaster_accident">사고</string>
+    <string name="title_disaster_fire">화재</string>
+    <string name="title_disaster_rescue">구조</string>
+    <string name="title_disaster_etc">기타</string>
+
     <!--권한-->
     <string name="permission_calendar">캘린더</string>
     <string name="permission_call_log">통화 기록</string>

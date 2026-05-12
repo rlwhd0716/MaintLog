@@ -1,3 +1,22 @@
 <resources>
     <string name="app_name">MaintLog_Android</string>
+    <string name="title_request_detail">요청사항 상세</string>
+    <string name="title_request_form">요청사항 입력</string>
+    <string name="title_incident_detail">장애 상세</string>
+    <string name="title_incident_form">장애 입력</string>
+    <string name="action_save">저장</string>
+    <string name="action_cancel">취소</string>
+    <string name="action_add_log">로그 추가</string>
+    <string name="label_title">제목</string>
+    <string name="label_status">상태</string>
+    <string name="label_requester">요청자</string>
+    <string name="label_reporter">등록자</string>
+    <string name="label_request_content">요청 내용</string>
+    <string name="label_incident_content">장애 내용</string>
+    <string name="label_priority">우선순위</string>
+    <string name="label_severity">중요도</string>
+    <string name="label_cause">원인</string>
+    <string name="label_impact_scope">영향 범위</string>
+    <string name="label_request_log">작업 로그</string>
+    <string name="label_incident_log">조치 로그</string>
 </resources>

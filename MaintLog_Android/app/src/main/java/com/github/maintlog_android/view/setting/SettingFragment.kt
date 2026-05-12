@@ -1,4 +1,4 @@
-package com.github.maintlog_android.view.main.nav
+package com.github.maintlog_android.view.setting
 
 import com.github.maintlog_android.R
 import com.github.maintlog_android.databinding.FragmentSettingBinding

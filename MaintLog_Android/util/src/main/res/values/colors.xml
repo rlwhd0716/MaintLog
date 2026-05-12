@@ -58,6 +58,20 @@
     <color name="rvHeaderBorderColor">#BBBBBB</color>
     <color name="rvItemBorderColor">#666666</color>
 
+    <!--  지령서 종별 색상  -->
+    <color name="typeFireBg">#1AFF7171</color>
+    <color name="typeFireColor">#FF7171</color>
+    <color name="typeAidBg">#1A7DFFBA</color>
+    <color name="typeAidColor">#7DFFBA</color>
+    <color name="typeRescueBg">#1AFFD97D</color>
+    <color name="typeRescueColor">#FFD97D</color>
+    <color name="typeIncidentBg">#1A7C98FF</color>
+    <color name="typeIncidentColor">#7C98FF</color>
+    <color name="typeAccidentBg">#1A1A8BD5</color>
+    <color name="typeAccidentColor">#1A8BD5</color>
+    <color name="typeEtcBg">#1ADC7DFF</color>
+    <color name="typeEtcColor">#DC7DFF</color>
+
     <!--  다이얼로그 색상  -->
     <color name="dialogBorderColor">#BBBBBB</color>
     <color name="dialogGradientStart">#444444</color>
