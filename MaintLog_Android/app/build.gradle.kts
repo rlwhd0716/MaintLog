@@ -41,6 +41,7 @@ android {
     buildFeatures {
         dataBinding = true
         viewBinding = true
+        buildConfig = true
     }
 }
 
@@ -54,7 +55,6 @@ dependencies {
     implementation(libs.bundles.ui)
     implementation(libs.bundles.nav)
     implementation(libs.bundles.component)
-    implementation(libs.activity)
     testImplementation(libs.test.junit)
     androidTestImplementation(libs.android.test.junit)
     androidTestImplementation(libs.android.test.core)

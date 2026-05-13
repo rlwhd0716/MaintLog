@@ -31,6 +31,7 @@ android {
     buildFeatures {
         dataBinding = true
         viewBinding = true
+        buildConfig = true
     }
     compileOptions {
         sourceCompatibility = rootProject.extra["JDK-Version"] as JavaVersion
@@ -44,8 +45,8 @@ android {
 
 dependencies {
     implementation(libs.bundles.ui)
-    implementation(libs.activity)
     implementation(libs.androidx.constraintlayout)
+    implementation(libs.bundles.component)
     testImplementation(libs.test.junit)
     androidTestImplementation(libs.android.test.junit)
     androidTestImplementation(libs.android.test.core)
