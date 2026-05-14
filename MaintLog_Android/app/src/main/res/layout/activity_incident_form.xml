@@ -9,7 +9,7 @@
         android:layout_height="match_parent"
         android:background="@color/white"
         android:orientation="vertical"
-        tools:context=".view.incident.form.IncidentFormFragment">
+        tools:context=".view.incident.form.IncidentFormActivity">
 
         <com.github.util.ui.CustomTitleView
             android:id="@+id/title_incident_form"

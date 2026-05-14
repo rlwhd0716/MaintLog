@@ -80,7 +80,7 @@
 
     <fragment
         android:id="@+id/incidentDetailFragment"
-        android:name="com.github.maintlog_android.view.incident.detail.IncidentDetailFragment"
+        android:name="com.github.maintlog_android.view.incident.detail.IncidentDetailActivity"
         android:label="incident_detail">
         <action
             android:id="@+id/action_incidentDetailFragment_to_incidentFormFragment"
@@ -89,7 +89,7 @@
 
     <fragment
         android:id="@+id/incidentFormFragment"
-        android:name="com.github.maintlog_android.view.incident.form.IncidentFormFragment"
+        android:name="com.github.maintlog_android.view.incident.form.IncidentFormActivity"
         android:label="incident_form" />
 
 </navigation>
