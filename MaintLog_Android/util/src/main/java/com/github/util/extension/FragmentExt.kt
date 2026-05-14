@@ -21,9 +21,11 @@ fun Fragment.addFragmentInFragment(fragment: Fragment, frameId: Int) {
 }
 
 
-inline fun <reified T : Fragment> T.startActivityIntent(noinline unit: (() -> Unit)? = null) {
-    startActivity(Intent(requireActivity(), T::class.java))
-    unit?.invoke()
+inline fun <reified T : Activity> Fragment.startActivityInFragment(noinline block: (Intent.() -> Unit)? = null, noinline action: (() -> Unit)? = null) {
+    startActivity(Intent(requireActivity(), T::class.java).apply {
+        block?.let { this.apply(block) }
+    })
+    action?.invoke()
 }
 
 inline fun <T : Fragment> T.withArgs(argsBuilder: Bundle.() -> Unit): T = this.apply {

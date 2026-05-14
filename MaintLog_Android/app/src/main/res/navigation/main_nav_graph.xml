@@ -66,7 +66,7 @@
 
     <fragment
         android:id="@+id/requestDetailFragment"
-        android:name="com.github.maintlog_android.view.request.detail.RequestDetailFragment"
+        android:name="com.github.maintlog_android.view.request.detail.RequestDetailActivity"
         android:label="request_detail">
         <action
             android:id="@+id/action_requestDetailFragment_to_requestFormFragment"
@@ -75,7 +75,7 @@
 
     <fragment
         android:id="@+id/requestFormFragment"
-        android:name="com.github.maintlog_android.view.request.form.RequestFormFragment"
+        android:name="com.github.maintlog_android.view.request.form.RequestFormActivity"
         android:label="request_form" />
 
     <fragment
