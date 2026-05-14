@@ -1,8 +1,8 @@
 package com.github.maintlog_android.di
 
 import android.content.Context
-import com.github.data.annotation.ApiKey
-import com.github.data.api.MainApiService
+import com.github.data.annotation.PublicDataApiKey
+import com.github.data.api.PublicDataApiService
 import com.github.maintlog_android.BuildConfig
 import com.google.gson.Gson
 import dagger.Module
@@ -18,13 +18,14 @@ import retrofit2.converter.gson.GsonConverterFactory
 import java.util.Locale
 import java.util.concurrent.TimeUnit
 import javax.inject.Singleton
+import kotlin.jvm.java
 
 @Module
 @InstallIn(SingletonComponent::class)
 object NetworkModule {
-    /*@Provides
-    @ApiKey
-    fun provideApiKey(): String = BuildConfig.API_KEY*/
+    @Provides
+    @PublicDataApiKey
+    fun provideApiKey(): String = BuildConfig.PUBLIC_DATA_API_KEY
 
     @Singleton
     @Provides
@@ -43,7 +44,7 @@ object NetworkModule {
                 addHeader("accept", "*/*")
                 addHeader("Content-Type", "application/json")
                 addHeader("Connection", "close")
-                addHeader("Accept-Language", Locale.getDefault().toLanguageTag())
+//                addHeader("Accept-Language", Locale.getDefault().toLanguageTag())
             }.build())
         }
 
@@ -90,14 +91,14 @@ object NetworkModule {
     }*/
 
 
-//    @Singleton
-//    @Provides
-//    fun provideOtherApiService(@ApplicationContext appContext: Context, okHttpClient: OkHttpClient, gson: Gson) : OtherApiService {
-//        val baseUrl = BuildConfig.Other_IP
-//        return Retrofit.Builder()
-//            .baseUrl(baseUrl)
-//            .client(okHttpClient)
-//            .addConverterFactory(GsonConverterFactory.create(gson))
-//            .build().create(OtherApiService::class.java)
-//    }
+    @Singleton
+    @Provides
+    fun provideOtherApiService(@ApplicationContext appContext: Context, okHttpClient: OkHttpClient, gson: Gson) : PublicDataApiService {
+        val baseUrl = BuildConfig.PUBLIC_DATA_API
+        return Retrofit.Builder()
+            .baseUrl(baseUrl)
+            .client(okHttpClient)
+            .addConverterFactory(GsonConverterFactory.create(gson))
+            .build().create(PublicDataApiService::class.java)
+    }
 }

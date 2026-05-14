@@ -1,12 +1,15 @@
 package com.github.maintlog_android.view.main
 
 import android.os.Bundle
+import androidx.lifecycle.lifecycleScope
 import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.ui.setupWithNavController
 import com.github.maintlog_android.R
 import com.github.maintlog_android.databinding.ActivityMainBinding
 import com.github.util.base.BaseActivity
 import dagger.hilt.android.AndroidEntryPoint
+import kotlinx.coroutines.delay
+import kotlinx.coroutines.launch
 
 @AndroidEntryPoint
 class MainActivity : BaseActivity<ActivityMainBinding, MainViewModel>(R.layout.activity_main) {
@@ -15,6 +18,13 @@ class MainActivity : BaseActivity<ActivityMainBinding, MainViewModel>(R.layout.a
         super.onCreate(savedInstanceState)
 
         initBottomNavigation()
+    }
+
+    override var vmApply: (MainViewModel.() -> Unit)? = {
+        lifecycleScope.launch {
+            delay(1000)
+            getWeatherForecast()
+        }
     }
 
     private fun initBottomNavigation() {
