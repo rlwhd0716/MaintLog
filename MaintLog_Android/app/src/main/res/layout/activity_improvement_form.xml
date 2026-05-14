@@ -9,7 +9,7 @@
         android:layout_height="match_parent"
         android:background="@color/white"
         android:orientation="vertical"
-        tools:context=".view.request.form.RequestFormActivity">
+        tools:context=".view.improvement.form.ImprovementFormActivity">
 
         <com.github.util.ui.CustomTitleView
             android:id="@+id/title_request_form"

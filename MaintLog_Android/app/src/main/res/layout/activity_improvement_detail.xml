@@ -3,13 +3,19 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools">
 
+    <data>
+        <variable
+            name="vm"
+            type="com.github.maintlog_android.view.improvement.detail.ImprovementDetailViewModel" />
+    </data>
+
     <LinearLayout
         android:id="@+id/main"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="@color/white"
         android:orientation="vertical"
-        tools:context=".view.request.detail.RequestDetailActivity">
+        tools:context=".view.improvement.detail.ImprovementDetailActivity">
 
         <com.github.util.ui.CustomTitleView
             android:id="@+id/title_request_detail"
@@ -186,21 +192,15 @@
                             android:textSize="@dimen/content_14" />
                     </LinearLayout>
 
-                    <View
-                        android:layout_width="match_parent"
-                        android:layout_height="1dp"
-                        android:layout_marginTop="@dimen/margin_12dp"
-                        android:background="@color/primaryLightGray" />
 
-                    <TextView
-                        android:id="@+id/tv_request_log_status_changed"
+                    <androidx.recyclerview.widget.RecyclerView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="@dimen/margin_16dp"
-                        android:lineSpacingExtra="6dp"
-                        android:text="2026-04-13   상태 변경  →  진행중\n조치 상태를 진행중으로 변경함."
-                        android:textColor="@color/primaryBlack"
-                        android:textSize="@dimen/content_16" />
+                        tools:listitem="@layout/item_work_log"
+                        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                        android:adapter="@{vm.workLogAdapter}"
+                        bindAdapter="@{vm.workLogList}"
+                        />
 
                     <View
                         android:layout_width="match_parent"

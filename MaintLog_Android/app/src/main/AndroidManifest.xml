@@ -16,10 +16,10 @@
             android:name=".view.main.MainActivity"
             android:exported="false" />
         <activity
-            android:name=".view.request.detail.RequestDetailActivity"
+            android:name=".view.improvement.detail.ImprovementDetailActivity"
             android:exported="false" />
         <activity
-            android:name=".view.request.form.RequestFormActivity"
+            android:name=".view.improvement.form.ImprovementFormActivity"
             android:exported="false" />
         <activity
             android:name=".view.intro.SplashActivity"

@@ -45,7 +45,7 @@ abstract class BaseRecyclerViewAdapter<B : ViewDataBinding, DATA>(val layoutId: 
     }
 
     interface OnClickEvent<T> {
-        fun itemClick(position: Int, item: T)
+        fun itemClick(item: T)
     }
 }
 

@@ -25,7 +25,7 @@
 
     <fragment
         android:id="@+id/requestFragment"
-        android:name="com.github.maintlog_android.view.request.RequestFragment"
+        android:name="com.github.maintlog_android.view.improvement.ImprovementFragment"
         android:label="request">
         <action
             android:id="@+id/action_requestFragment_to_requestDetailFragment"
@@ -66,7 +66,7 @@
 
     <fragment
         android:id="@+id/requestDetailFragment"
-        android:name="com.github.maintlog_android.view.request.detail.RequestDetailActivity"
+        android:name="com.github.maintlog_android.view.improvement.detail.ImprovementDetailActivity"
         android:label="request_detail">
         <action
             android:id="@+id/action_requestDetailFragment_to_requestFormFragment"
@@ -75,7 +75,7 @@
 
     <fragment
         android:id="@+id/requestFormFragment"
-        android:name="com.github.maintlog_android.view.request.form.RequestFormActivity"
+        android:name="com.github.maintlog_android.view.improvement.form.ImprovementFormActivity"
         android:label="request_form" />
 
     <fragment

@@ -4,10 +4,9 @@ import androidx.navigation.fragment.findNavController
 import com.github.maintlog_android.R
 import com.github.maintlog_android.databinding.FragmentHomeBinding
 import com.github.maintlog_android.view.main.MainViewModel
-import com.github.maintlog_android.view.request.form.RequestFormActivity
+import com.github.maintlog_android.view.improvement.form.ImprovementFormActivity
 import com.github.util.base.BaseFragment
 import com.github.util.extension.startActivityInFragment
-import com.github.util.extension.startActivityIntent
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
@@ -34,7 +33,7 @@ class HomeFragment: BaseFragment<FragmentHomeBinding, MainViewModel>(R.layout.fr
 
         /* 하단 버튼 */
         btnHomeAddRequest.setOnClickListener {
-            startActivityInFragment<RequestFormActivity>()
+            startActivityInFragment<ImprovementFormActivity>()
         }
         btnHomeAddIncident.setOnClickListener {
             findNavController().navigate(R.id.action_homeFragment_to_incidentFormFragment)

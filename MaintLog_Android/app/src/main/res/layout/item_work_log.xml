@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+    <data>
+        <variable
+            name="item"
+            type="com.github.domain.model.work.WorkLogData" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="@dimen/margin_12dp"
+            android:background="@color/primaryLightGray" />
+
+        <TextView
+            android:id="@+id/tv_request_log_status_changed"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_16dp"
+            android:lineSpacingExtra="6dp"
+            android:text="2026-04-13   상태 변경  →  진행중\n조치 상태를 진행중으로 변경함."
+            android:textColor="@color/primaryBlack"
+            android:textSize="@dimen/content_16" />
+    </LinearLayout>
+</layout>
