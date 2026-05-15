@@ -4,7 +4,9 @@ import android.content.res.ColorStateList
 import androidx.annotation.ColorInt
 import androidx.databinding.BindingAdapter
 import androidx.recyclerview.widget.RecyclerView
+import com.github.domain.model.action.ActionData
 import com.github.domain.model.work.WorkLogData
+import com.github.maintlog_android.view.home.HomeActionAdapter
 import com.github.maintlog_android.view.work.WorkLogAdapter
 import com.github.util.event.MutableListLiveData
 import com.github.util.extension.logE
@@ -18,6 +20,9 @@ fun setBindRecyclerViewAdapter(view: RecyclerView, datas: MutableListLiveData<*>
         when (this) {
             is WorkLogAdapter -> {
                 this.datas = (datas.value ?: mutableListOf()) as MutableList<WorkLogData>
+            }
+            is HomeActionAdapter -> {
+                this.datas = (datas.value ?: mutableListOf()) as MutableList<ActionData>
             }
         }
         this.notifyDataSetChanged()

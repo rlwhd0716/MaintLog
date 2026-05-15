@@ -3,6 +3,12 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools">
 
+    <data>
+        <variable
+            name="vm"
+            type="com.github.maintlog_android.view.main.MainViewModel" />
+    </data>
+
     <LinearLayout
         android:id="@+id/main"
         android:layout_width="match_parent"
@@ -149,120 +155,14 @@
                         android:layout_marginTop="@dimen/margin_12dp"
                         android:background="@color/primaryLightGray" />
 
-                    <LinearLayout
-                        android:id="@+id/item_home_request_login"
+                    <androidx.recyclerview.widget.RecyclerView
                         android:layout_width="match_parent"
-                        android:layout_height="52dp"
-                        android:gravity="center_vertical"
-                        android:orientation="horizontal">
-
-                        <TextView
-                            android:layout_width="0dp"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="1"
-                            android:fontFamily="@font/pretendard_semibold"
-                            android:text="로그인 문제 발생"
-                            android:textColor="@color/primaryBlack"
-                            android:textSize="@dimen/content_18" />
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginEnd="@dimen/margin_12dp"
-                            android:text="진행중"
-                            android:textColor="@color/primaryDarkGray"
-                            android:textSize="@dimen/content_16" />
-
-                        <TextView
-                            android:layout_width="72dp"
-                            android:layout_height="34dp"
-                            android:background="@color/primaryGray"
-                            android:fontFamily="@font/pretendard_semibold"
-                            android:gravity="center"
-                            android:text="진행중"
-                            android:textColor="@color/white"
-                            android:textSize="@dimen/content_16" />
-                    </LinearLayout>
-
-                    <View
-                        android:layout_width="match_parent"
-                        android:layout_height="1dp"
-                        android:background="@color/primaryLightGray" />
-
-                    <LinearLayout
-                        android:id="@+id/item_home_request_data"
-                        android:layout_width="match_parent"
-                        android:layout_height="52dp"
-                        android:gravity="center_vertical"
-                        android:orientation="horizontal">
-
-                        <TextView
-                            android:layout_width="0dp"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="1"
-                            android:fontFamily="@font/pretendard_semibold"
-                            android:text="데이터 오류 수정"
-                            android:textColor="@color/primaryBlack"
-                            android:textSize="@dimen/content_18" />
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginEnd="@dimen/margin_12dp"
-                            android:text="완료"
-                            android:textColor="@color/primaryDarkGray"
-                            android:textSize="@dimen/content_16" />
-
-                        <TextView
-                            android:layout_width="72dp"
-                            android:layout_height="34dp"
-                            android:background="@color/primaryGray"
-                            android:fontFamily="@font/pretendard_semibold"
-                            android:gravity="center"
-                            android:text="완료"
-                            android:textColor="@color/white"
-                            android:textSize="@dimen/content_16" />
-                    </LinearLayout>
-
-                    <View
-                        android:layout_width="match_parent"
-                        android:layout_height="1dp"
-                        android:background="@color/primaryLightGray" />
-
-                    <LinearLayout
-                        android:id="@+id/item_home_request_api"
-                        android:layout_width="match_parent"
-                        android:layout_height="52dp"
-                        android:gravity="center_vertical"
-                        android:orientation="horizontal">
-
-                        <TextView
-                            android:layout_width="0dp"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="1"
-                            android:fontFamily="@font/pretendard_semibold"
-                            android:text="API 속도 지연"
-                            android:textColor="@color/primaryBlack"
-                            android:textSize="@dimen/content_18" />
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginEnd="@dimen/margin_12dp"
-                            android:text="보류"
-                            android:textColor="@color/primaryDarkGray"
-                            android:textSize="@dimen/content_16" />
-
-                        <TextView
-                            android:layout_width="72dp"
-                            android:layout_height="34dp"
-                            android:background="@color/primaryGray"
-                            android:fontFamily="@font/pretendard_semibold"
-                            android:gravity="center"
-                            android:text="보류"
-                            android:textColor="@color/white"
-                            android:textSize="@dimen/content_16" />
-                    </LinearLayout>
+                        android:layout_height="wrap_content"
+                        tools:listitem="@layout/item_home_action"
+                        android:adapter="@{vm.homeActionAdapter}"
+                        bindAdapter="@{vm.improvementActionList}"
+                        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                        />
                 </LinearLayout>
 
                 <View

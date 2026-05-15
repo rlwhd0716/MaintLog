@@ -1,8 +1,11 @@
 package com.github.maintlog_android.view.main
 
+import com.github.domain.model.action.ActionData
 import com.github.domain.model.weather.WeatherRequestData
 import com.github.domain.usecase.GetForecastUseCase
+import com.github.maintlog_android.view.home.HomeActionAdapter
 import com.github.util.base.BaseViewModel
+import com.github.util.event.MutableListLiveData
 import com.github.util.extension.logE
 import dagger.hilt.android.lifecycle.HiltViewModel
 import javax.inject.Inject
@@ -12,6 +15,18 @@ class MainViewModel @Inject constructor(
     private val forecastUseCase: GetForecastUseCase
 ) : BaseViewModel() {
 
+    private val _improvementActionList = MutableListLiveData<ActionData>()
+    val improvementActionList get() = _improvementActionList
+
+    val homeActionAdapter = HomeActionAdapter(this@MainViewModel)
+
+    fun getImprovementActions() {
+        _improvementActionList.add(ActionData(""))
+        _improvementActionList.add(ActionData(""))
+        _improvementActionList.add(ActionData(""))
+        _improvementActionList.add(ActionData(""))
+        _improvementActionList.add(ActionData(""))
+    }
 
     fun getWeatherForecast() {
         forecastUseCase.execute(
