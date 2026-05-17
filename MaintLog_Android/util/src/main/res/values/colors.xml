@@ -1,5 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+
+    <!-- ====================================================== -->
+    <!-- Default Android Template Colors -->
+    <!-- ====================================================== -->
     <color name="purple_200">#FFBB86FC</color>
     <color name="purple_500">#FF6200EE</color>
     <color name="purple_700">#FF3700B3</color>
@@ -8,73 +12,181 @@
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
 
-    <color name="colorPrimary">#8D64F9</color>
-    <color name="colorPrimaryDark">#7845F3</color>
-    <color name="colorAccent">#F56FA3</color>
-    <color name="red">#A01D1D</color>
-    <color name="blue">#0E0E9A</color>
-    <color name="green">#146E17</color>
-    <color name="yellow">#D3C022</color>
 
-    <!--  디자인 컬러  -->
-    <!--  공통 색상 모음  -->
-    <color name="primaryBlack">#222222</color>
-    <color name="primaryBlackAlpha">#CC222222</color>
-    <color name="primaryBlack80">#80222222</color>
+    <!-- ====================================================== -->
+    <!-- Brand Colors -->
+    <!-- ====================================================== -->
+
+    <!-- 메인 브랜드 컬러 -->
+    <color name="colorPrimary">#2F80ED</color>
+    <color name="colorPrimaryDark">#1F5FBF</color>
+    <color name="colorPrimaryLight">#EAF3FF</color>
+
+    <!-- 보조 브랜드 컬러 -->
+    <color name="colorSecondary">#35B558</color>
+    <color name="colorSecondaryDark">#258A40</color>
+    <color name="colorSecondaryLight">#EAF8EE</color>
+
+    <!-- 강조 컬러 -->
+    <color name="colorAccent">#FDBA2D</color>
+    <color name="colorAccentDark">#D99000</color>
+    <color name="colorAccentLight">#FFF6DF</color>
+
+
+    <!-- ====================================================== -->
+    <!-- Background / Surface -->
+    <!-- ====================================================== -->
+
+    <!-- 앱 기본 배경 -->
+    <color name="colorBackground">#F5F6F8</color>
+
+    <!-- 카드, Dialog, BottomSheet 등 표면 색상 -->
+    <color name="colorSurface">#FFFFFFFF</color>
+
+    <!-- 어두운 표면 -->
+    <color name="colorSurfaceDark">#222222</color>
+
+    <!-- 비활성 배경 -->
+    <color name="colorDisabledBackground">#F1F2F4</color>
+
+
+    <!-- ====================================================== -->
+    <!-- Text Colors -->
+    <!-- ====================================================== -->
+
+    <!-- 메인 텍스트 -->
+    <color name="colorTextPrimary">#20242A</color>
+
+    <!-- 보조 텍스트 -->
+    <color name="colorTextSecondary">#666D78</color>
+
+    <!-- 설명/힌트 텍스트 -->
+    <color name="colorTextTertiary">#9AA0A8</color>
+
+    <!-- 비활성 텍스트 -->
+    <color name="colorTextDisabled">#BBBBBB</color>
+
+    <!-- 반전 텍스트 -->
+    <color name="colorTextInverse">#FFFFFFFF</color>
+
+
+    <!-- ====================================================== -->
+    <!-- Border / Divider / Shadow -->
+    <!-- ====================================================== -->
+
+    <color name="colorBorder">#E1E4E8</color>
+    <color name="colorBorderDark">#BBBBBB</color>
+    <color name="colorDivider">#E5E7EB</color>
+    <color name="colorShadow">#1A000000</color>
+
+
+    <!-- ====================================================== -->
+    <!-- Semantic / Status Colors -->
+    <!-- ====================================================== -->
+
+    <!-- Error: 장애, 조치중, 위험 -->
+    <color name="colorError">#E5484D</color>
+    <color name="colorErrorDark">#B92D32</color>
+    <color name="colorErrorLight">#FDECEC</color>
+    <color name="colorErrorAlpha">#1AE5484D</color>
+
+    <!-- Warning: 미해결, 경고 -->
+    <color name="colorWarning">#F59E0B</color>
+    <color name="colorWarningDark">#C77700</color>
+    <color name="colorWarningLight">#FFF7E6</color>
+    <color name="colorWarningAlpha">#1AF59E0B</color>
+
+    <!-- Success: 완료, 종료, 정상 -->
+    <color name="colorSuccess">#35B558</color>
+    <color name="colorSuccessDark">#258A40</color>
+    <color name="colorSuccessLight">#EAF8EE</color>
+    <color name="colorSuccessAlpha">#1A35B558</color>
+
+    <!-- Info: 진행중, 정보 -->
+    <color name="colorInfo">#2F80ED</color>
+    <color name="colorInfoDark">#1F5FBF</color>
+    <color name="colorInfoLight">#EAF3FF</color>
+    <color name="colorInfoAlpha">#1A2F80ED</color>
+
+    <!-- Neutral: 보류, 대기, 비활성 -->
+    <color name="colorNeutral">#8A8F98</color>
+    <color name="colorNeutralDark">#666D78</color>
+    <color name="colorNeutralLight">#F1F2F4</color>
+    <color name="colorNeutralAlpha">#1A8A8F98</color>
+
+
+    <!-- ====================================================== -->
+    <!-- Weather Colors -->
+    <!-- ====================================================== -->
+
+    <color name="colorWeatherSunny">#FDBA2D</color>
+    <color name="colorWeatherRain">#5B9DEE</color>
+    <color name="colorWeatherCloud">#7B818A</color>
+
+
+    <!-- ====================================================== -->
+    <!-- Component Colors -->
+    <!-- ====================================================== -->
+
+    <!-- 입력 컴포넌트 -->
+    <color name="inputBorderColor">#E1E4E8</color>
+    <color name="inputHintColor">#9AA0A8</color>
+    <color name="inputBgColor">#FFFFFFFF"</color>
+
+    <!-- 버튼 컴포넌트 -->
+    <color name="buttonBorderColor">#E1E4E8</color>
+    <color name="buttonDisabledColor">#BBBBBB</color>
+
+    <!-- 리사이클러뷰 -->
+    <color name="rvItemSubColor">#666D78</color>
+    <color name="rvItemSelectedColor">#2F80ED</color>
+    <color name="rvItemDisabledColor">#9AA0A8</color>
+    <color name="rvHeaderBgColor">#F5F6F8</color>
+    <color name="rvHeaderBorderColor">#E1E4E8</color>
+    <color name="rvItemBorderColor">#E5E7EB</color>
+
+    <!-- 다이얼로그 -->
+    <color name="dialogBorderColor">#E1E4E8</color>
+    <color name="dialogGradientStart">#FFFFFFFF</color>
+    <color name="dialogGradientEnd">#F5F6F8</color>
+    <color name="dialogCancelColor">#8A8F98</color>
+
+    <!-- 바텀시트 -->
+    <color name="bsItemBorderColor">#E1E4E8</color>
+    <color name="bsItemBgGray">#F1F2F4</color>
+    <color name="bsItemBgColor">#FFFFFFFF</color>
+    <color name="bsStartBgColor">#99FFFFFF</color>
+    <color name="bsEndBgColor">#99F5F6F8</color>
+
+
+    <!-- ====================================================== -->
+    <!-- Legacy Alias Colors -->
+    <!-- 기존 코드 호환용. 점진적으로 위 공통 컬러로 교체 권장 -->
+    <!-- ====================================================== -->
+
+    <color name="primaryBlack">#20242A</color>
+    <color name="primaryBlackAlpha">#CC20242A</color>
+    <color name="primaryBlack80">#8020242A</color>
     <color name="primaryDarkGray">#444444</color>
     <color name="primaryDarkGrayAlpha">#CC444444</color>
-    <color name="primaryColor">#FFE97D</color>
-    <color name="primaryYellowAlpha">#1AFFE97D</color>
+
+    <color name="primaryColor">#2F80ED</color>
+    <color name="primaryYellowAlpha">#1AFDBA2D</color>
     <color name="primaryDisabledColor">#BBBBBB</color>
-    <color name="primaryGray">#666666</color>
-    <color name="primaryGrayAlpha">#CC666666</color>
+
+    <color name="primaryGray">#666D78</color>
+    <color name="primaryGrayAlpha">#CC666D78</color>
     <color name="primaryLightGray">#C7C8CA</color>
-    <color name="primaryRed">#FF7171</color>
-    <color name="primaryRedAlpha">#CCFF7171</color>
 
-    <color name="secondaryColorDark">#938850</color>
-    <color name="secondaryColorLight">#FBE7A7</color>
+    <color name="primaryRed">#E5484D</color>
+    <color name="primaryRedAlpha">#CCE5484D</color>
 
-    <!--  입력 컴포넌트  -->
-    <color name="inputBorderColor">#DDDDDD</color>
-    <color name="inputHintColor">#BBBBBB</color>
-    <color name="inputBgColor">#000000</color>
+    <color name="secondaryColorDark">#258A40</color>
+    <color name="secondaryColorLight">#EAF8EE</color>
 
-    <!--  버튼 컴포넌트  -->
-    <color name="buttonBorderColor">#BBBBBB</color>
+    <color name="red">#E5484D</color>
+    <color name="blue">#2F80ED</color>
+    <color name="green">#35B558</color>
+    <color name="yellow">#FDBA2D</color>
 
-    <!--  바텀시트 컴포넌트  -->
-    <color name="bsItemBorderColor">#938850</color>
-    <color name="bsItemBgGray">#666666</color>
-    <color name="bsItemBgColor">#222222</color>
-    <color name="bsStartBgColor">#99444444</color>
-    <color name="bsEndBgColor">#99222222</color>
-
-    <!--  리사이클러 아이템 색상  -->
-    <color name="rvItemSubColor">#DDDDDD</color>
-    <color name="rvItemSelectedColor">#938850</color>
-    <color name="rvItemDisabledColor">#666666</color>
-    <color name="rvHeaderBgColor">#333333</color>
-    <color name="rvHeaderBorderColor">#BBBBBB</color>
-    <color name="rvItemBorderColor">#666666</color>
-
-    <!--  지령서 종별 색상  -->
-    <color name="typeFireBg">#1AFF7171</color>
-    <color name="typeFireColor">#FF7171</color>
-    <color name="typeAidBg">#1A7DFFBA</color>
-    <color name="typeAidColor">#7DFFBA</color>
-    <color name="typeRescueBg">#1AFFD97D</color>
-    <color name="typeRescueColor">#FFD97D</color>
-    <color name="typeIncidentBg">#1A7C98FF</color>
-    <color name="typeIncidentColor">#7C98FF</color>
-    <color name="typeAccidentBg">#1A1A8BD5</color>
-    <color name="typeAccidentColor">#1A8BD5</color>
-    <color name="typeEtcBg">#1ADC7DFF</color>
-    <color name="typeEtcColor">#DC7DFF</color>
-
-    <!--  다이얼로그 색상  -->
-    <color name="dialogBorderColor">#BBBBBB</color>
-    <color name="dialogGradientStart">#444444</color>
-    <color name="dialogGradientEnd">#222222</color>
-    <color name="dialogCancelColor">#666666</color>
 </resources>

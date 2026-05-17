@@ -14,6 +14,7 @@ import javax.inject.Inject
 class MainViewModel @Inject constructor(
     private val forecastUseCase: GetForecastUseCase
 ) : BaseViewModel() {
+    private val MAX_RECENT_COUNT = 3
 
     private val _improvementActionList = MutableListLiveData<ActionData>()
     val improvementActionList get() = _improvementActionList

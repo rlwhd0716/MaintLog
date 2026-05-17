@@ -162,7 +162,7 @@
                         android:adapter="@{vm.homeActionAdapter}"
                         bindAdapter="@{vm.improvementActionList}"
                         app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
-                        />
+                        tools:itemCount="3"/>
                 </LinearLayout>
 
                 <View
@@ -220,70 +220,6 @@
                             android:textColor="@color/white"
                             android:textSize="@dimen/content_16" />
                     </LinearLayout>
-
-                    <View
-                        android:layout_width="match_parent"
-                        android:layout_height="1dp"
-                        android:background="@color/primaryLightGray" />
-
-                    <LinearLayout
-                        android:id="@+id/item_home_incident_network"
-                        android:layout_width="match_parent"
-                        android:layout_height="52dp"
-                        android:gravity="center_vertical"
-                        android:orientation="horizontal">
-
-                        <TextView
-                            android:layout_width="0dp"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="1"
-                            android:fontFamily="@font/pretendard_semibold"
-                            android:text="네트워크 문제"
-                            android:textColor="@color/primaryBlack"
-                            android:textSize="@dimen/content_18" />
-
-                        <TextView
-                            android:layout_width="72dp"
-                            android:layout_height="34dp"
-                            android:background="@color/primaryGray"
-                            android:fontFamily="@font/pretendard_semibold"
-                            android:gravity="center"
-                            android:text="미해결"
-                            android:textColor="@color/white"
-                            android:textSize="@dimen/content_16" />
-                    </LinearLayout>
-
-                    <View
-                        android:layout_width="match_parent"
-                        android:layout_height="1dp"
-                        android:background="@color/primaryLightGray" />
-
-                    <LinearLayout
-                        android:id="@+id/item_home_incident_db"
-                        android:layout_width="match_parent"
-                        android:layout_height="52dp"
-                        android:gravity="center_vertical"
-                        android:orientation="horizontal">
-
-                        <TextView
-                            android:layout_width="0dp"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="1"
-                            android:fontFamily="@font/pretendard_semibold"
-                            android:text="DB 연결 오류"
-                            android:textColor="@color/primaryBlack"
-                            android:textSize="@dimen/content_18" />
-
-                        <TextView
-                            android:layout_width="72dp"
-                            android:layout_height="34dp"
-                            android:background="@color/primaryGray"
-                            android:fontFamily="@font/pretendard_semibold"
-                            android:gravity="center"
-                            android:text="종료"
-                            android:textColor="@color/white"
-                            android:textSize="@dimen/content_16" />
-                    </LinearLayout>
                 </LinearLayout>
 
                 <View
@@ -298,7 +234,7 @@
                     android:orientation="horizontal"
                     android:padding="@dimen/padding_16dp">
 
-                    <Button
+                    <com.google.android.material.button.MaterialButton
                         android:id="@+id/btn_home_add_request"
                         android:layout_width="0dp"
                         android:layout_height="96dp"

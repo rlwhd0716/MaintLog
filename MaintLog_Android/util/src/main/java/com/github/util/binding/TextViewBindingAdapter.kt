@@ -31,14 +31,3 @@ fun TextView.checkDataNullHyphen(_data: String?) {
 fun TextView.isEmptyText(str: String?) {
     text = if(str.isNullOrEmpty()) "-" else str
 }
-
-@BindingAdapter("setInstructionTextColor")
-fun TextView.setInstructionTextColor(icdTypeUpperNm: String?) {
-    when (icdTypeUpperNm) {
-        getString(R.string.title_disaster_emergency) -> setTextColor(ContextCompat.getColor(context, R.color.typeAidColor))
-        getString(R.string.title_disaster_accident) -> setTextColor(ContextCompat.getColor(context, R.color.typeIncidentColor))
-        getString(R.string.title_disaster_fire) -> setTextColor(ContextCompat.getColor(context, R.color.typeFireColor))
-        getString(R.string.title_disaster_rescue) -> setTextColor(ContextCompat.getColor(context, R.color.typeRescueColor))
-        else -> setTextColor(ContextCompat.getColor(context, R.color.typeEtcColor))
-    }
-}

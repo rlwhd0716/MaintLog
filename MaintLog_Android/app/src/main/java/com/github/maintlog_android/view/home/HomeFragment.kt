@@ -15,15 +15,6 @@ import dagger.hilt.android.AndroidEntryPoint
 @AndroidEntryPoint
 class HomeFragment: BaseFragment<FragmentHomeBinding, MainViewModel>(R.layout.fragment_home), BaseRecyclerViewAdapter.OnClickEvent<ActionData>{
     override var bindingApply: (FragmentHomeBinding.() -> Unit)? = {
-        itemHomeIncidentServer.setOnClickListener {
-            findNavController().navigate(R.id.action_homeFragment_to_incidentDetailFragment)
-        }
-        itemHomeIncidentNetwork.setOnClickListener {
-            findNavController().navigate(R.id.action_homeFragment_to_incidentDetailFragment)
-        }
-        itemHomeIncidentDb.setOnClickListener {
-            findNavController().navigate(R.id.action_homeFragment_to_incidentDetailFragment)
-        }
 
         /* 하단 버튼 */
         btnHomeAddRequest.setOnClickListener {

@@ -21,8 +21,11 @@ fun setBindRecyclerViewAdapter(view: RecyclerView, datas: MutableListLiveData<*>
             is WorkLogAdapter -> {
                 this.datas = (datas.value ?: mutableListOf()) as MutableList<WorkLogData>
             }
+
             is HomeActionAdapter -> {
-                this.datas = (datas.value ?: mutableListOf()) as MutableList<ActionData>
+                this.datas = ((datas.value ?: mutableListOf()) as MutableList<ActionData>)
+                    .take(3)
+                    .toMutableList()
             }
         }
         this.notifyDataSetChanged()
