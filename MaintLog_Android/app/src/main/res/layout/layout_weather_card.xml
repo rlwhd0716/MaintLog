@@ -1,63 +1,193 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-android:id="@+id/layoutWeather"
-android:layout_width="match_parent"
-android:layout_height="match_parent"
-android:orientation="vertical"
-android:padding="12dp"
-android:background="@drawable/bg_home_card">
-
-<TextView
-    android:id="@+id/tvWeatherTitle"
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:text="현재 위치 날씨"
-    android:textStyle="bold"
-    android:textSize="14sp" />
-
-<TextView
-    android:id="@+id/tvWeatherLocation"
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:text="위치 확인 중"
-    android:textSize="12sp" />
-
-<LinearLayout
+    android:id="@+id/layoutWeather"
     android:layout_width="match_parent"
-    android:layout_height="0dp"
-    android:layout_weight="1"
-    android:gravity="center"
-    android:orientation="horizontal">
-
-    <TextView
-        android:id="@+id/tvWeatherIcon"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="☀"
-        android:textSize="28sp" />
-
-    <TextView
-        android:id="@+id/tvTemperature"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:text="--℃"
-        android:textStyle="bold"
-        android:textSize="26sp" />
-</LinearLayout>
-
-<TextView
-    android:id="@+id/tvWeatherStatus"
-    android:layout_width="wrap_content"
     android:layout_height="wrap_content"
-    android:text="날씨 조회 중"
-    android:textSize="13sp" />
+    android:orientation="vertical"
+    android:padding="20dp">
 
-<TextView
-    android:id="@+id/tvWeatherDetail"
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:text="습도 --% · 강수 --mm"
-    android:textSize="12sp" />
+    <!-- 상단 -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tvWeatherTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="현재 위치 날씨"
+                android:textColor="@color/colorTextPrimary"
+                android:textSize="22sp"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="16dp"
+                    android:layout_height="16dp"
+                    android:src="@drawable/ic_location"
+                    android:tint="@color/colorTextSecondary" />
+
+                <TextView
+                    android:id="@+id/tvWeatherLocation"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="6dp"
+                    android:text="서울특별시 중구"
+                    android:textColor="@color/colorTextSecondary"
+                    android:textSize="15sp" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="16dp"
+                android:layout_height="16dp"
+                android:src="@drawable/ic_location_target"
+                android:tint="@color/colorTextSecondary" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="4dp"
+                android:text="위치 확인 중"
+                android:textColor="@color/colorTextSecondary"
+                android:textSize="14sp" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <!-- 중앙 -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="28dp"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/ivWeatherIcon"
+            android:layout_width="84dp"
+            android:layout_height="84dp"
+            android:src="@drawable/ic_weather_sunny" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tvTemperature"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="24℃"
+                android:textColor="@color/colorTextPrimary"
+                android:textSize="56sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tvWeatherStatus"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="맑음"
+                android:textColor="@color/colorTextPrimary"
+                android:textSize="22sp"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <!-- Divider -->
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="28dp"
+        android:background="@color/colorDivider" />
+
+    <!-- 하단 정보 -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="18dp"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <!-- 습도 -->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/ic_humidity"
+                android:tint="@color/colorInfo" />
+
+            <TextView
+                android:id="@+id/tvHumidity"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:text="습도 45%"
+                android:textColor="@color/colorTextSecondary"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <!-- Divider -->
+        <View
+            android:layout_width="1dp"
+            android:layout_height="24dp"
+            android:layout_marginStart="24dp"
+            android:layout_marginEnd="24dp"
+            android:background="@color/colorDivider" />
+
+        <!-- 강수 -->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/ic_rain"
+                android:tint="@color/colorTextSecondary" />
+
+            <TextView
+                android:id="@+id/tvRain"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:text="강수 0mm"
+                android:textColor="@color/colorTextSecondary"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+    </LinearLayout>
 
 </LinearLayout>
