@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/bottom_sheet_home_add"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="24dp"
+    android:background="@color/colorSurface">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="등록"
+        android:textColor="@color/colorTextPrimary"
+        android:textSize="@dimen/content_20"
+        android:fontFamily="@font/pretendard_semibold" />
+
+    <TextView
+        android:id="@+id/btnAddIncident"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:layout_marginTop="16dp"
+        android:gravity="center_vertical"
+        android:text="장애 등록"
+        android:textColor="@color/colorTextPrimary"
+        android:textSize="@dimen/content_18"
+        android:fontFamily="@font/pretendard_semibold"
+        android:drawableStart="@drawable/ic_warning_circle"
+        android:drawablePadding="12dp" />
+
+    <TextView
+        android:id="@+id/btnAddImprovement"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:gravity="center_vertical"
+        android:text="요청 등록"
+        android:textColor="@color/colorTextPrimary"
+        android:textSize="@dimen/content_18"
+        android:fontFamily="@font/pretendard_semibold"
+        android:drawableStart="@drawable/ic_add"
+        android:drawablePadding="12dp" />
+
+</LinearLayout>
