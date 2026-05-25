@@ -68,7 +68,9 @@
     <!--Text Content-->
     <dimen name="content_10">10sp</dimen>
     <dimen name="content_12">12sp</dimen>
+    <dimen name="content_13">13sp</dimen>
     <dimen name="content_14">14sp</dimen>
+    <dimen name="content_15">15sp</dimen>
     <dimen name="content_16">16sp</dimen>
     <dimen name="content_18">18sp</dimen>
     <dimen name="content_20">20sp</dimen>

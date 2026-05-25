@@ -24,7 +24,7 @@ fun setBindRecyclerViewAdapter(view: RecyclerView, datas: MutableListLiveData<*>
 
             is HomeActionAdapter -> {
                 this.datas = ((datas.value ?: mutableListOf()) as MutableList<ActionData>)
-                    .take(3)
+                    .take(5)
                     .toMutableList()
             }
         }

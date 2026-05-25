@@ -53,42 +53,65 @@
             android:gravity="center_vertical"
             android:orientation="horizontal">
 
-            <ImageView
-                android:layout_width="16dp"
-                android:layout_height="16dp"
-                android:src="@drawable/ic_humidity"
-                android:tint="@color/colorInfo" />
-
-            <TextView
-                android:id="@+id/tvHumidity"
+            <!-- 습도 Chip -->
+            <LinearLayout
+                android:id="@+id/layoutHumidityChip"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="4dp"
-                android:text="45%"
-                android:textColor="@color/colorTextSecondary"
-                android:textSize="13sp" />
+                android:layout_height="28dp"
+                android:background="@drawable/bg_weather_info_chip"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingStart="8dp"
+                android:paddingEnd="10dp">
 
-            <View
-                android:layout_width="1dp"
-                android:layout_height="12dp"
-                android:layout_marginStart="12dp"
-                android:layout_marginEnd="12dp"
-                android:background="@color/colorDivider" />
+                <ImageView
+                    android:layout_width="16dp"
+                    android:layout_height="16dp"
+                    android:src="@drawable/ic_humidity"
+                    android:tint="@color/colorInfo" />
 
-            <ImageView
-                android:layout_width="16dp"
-                android:layout_height="16dp"
-                android:src="@drawable/ic_rain"
-                android:tint="@color/colorTextSecondary" />
+                <TextView
+                    android:id="@+id/tvHumidity"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="4dp"
+                    android:fontFamily="@font/pretendard_medium"
+                    android:text="45%"
+                    android:textColor="@color/colorTextSecondary"
+                    android:textSize="13sp" />
 
-            <TextView
-                android:id="@+id/tvRain"
+            </LinearLayout>
+
+            <!-- 강수 Chip -->
+            <LinearLayout
+                android:id="@+id/layoutRainChip"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="4dp"
-                android:text="0mm"
-                android:textColor="@color/colorTextSecondary"
-                android:textSize="13sp" />
+                android:layout_height="28dp"
+                android:layout_marginStart="8dp"
+                android:background="@drawable/bg_weather_info_chip"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingStart="8dp"
+                android:paddingEnd="10dp">
+
+                <ImageView
+                    android:layout_width="16dp"
+                    android:layout_height="16dp"
+                    android:src="@drawable/ic_rain"
+                    android:tint="@color/colorTextSecondary" />
+
+                <TextView
+                    android:id="@+id/tvRain"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="4dp"
+                    android:fontFamily="@font/pretendard_medium"
+                    android:text="0mm"
+                    android:textColor="@color/colorTextSecondary"
+                    android:textSize="13sp" />
+
+            </LinearLayout>
+
         </LinearLayout>
 
     </LinearLayout>

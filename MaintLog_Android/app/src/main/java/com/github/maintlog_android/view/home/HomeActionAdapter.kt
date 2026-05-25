@@ -1,5 +1,6 @@
 package com.github.maintlog_android.view.home
 
+import android.view.View
 import com.github.domain.model.action.ActionData
 import com.github.maintlog_android.BR
 import com.github.maintlog_android.R
@@ -18,6 +19,8 @@ class HomeActionAdapter(val vm: MainViewModel): BaseRecyclerViewAdapter<ItemHome
     ) {
         binding?.apply {
             setVariable(BR.item, data)
+
+            viewActionDivider.visibility = if (position == datas.lastIndex) View.GONE else View.VISIBLE
 
             root.setOnClickListener {
                 getOnClickEvent()?.itemClick(data)
