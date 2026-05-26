@@ -52,7 +52,7 @@
                 android:ellipsize="end"
                 android:fontFamily="@font/pretendard_medium"
                 android:singleLine="true"
-                android:text="요청사항 / 장애 / 작업번호 / 설비 검색"
+                android:text="통합 검색"
                 android:textColor="@color/colorTextSecondary"
                 android:textSize="@dimen/content_14" />
 

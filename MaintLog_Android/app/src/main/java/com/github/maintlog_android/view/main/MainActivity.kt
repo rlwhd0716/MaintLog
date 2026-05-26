@@ -37,13 +37,6 @@ BaseRecyclerViewAdapter.OnClickEvent<ActionData>{
         binding?.bottomNavigation?.setupWithNavController(getNavHostFragment().navController)
     }
 
-    fun onTitleBackClick() {
-        val navController = getNavHostFragment().navController
-        if (!navController.navigateUp()) {
-            finish()
-        }
-    }
-
     private fun getNavHostFragment(): NavHostFragment {
         return supportFragmentManager.findFragmentById(R.id.nav_host_fragment) as NavHostFragment
     }

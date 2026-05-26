@@ -24,7 +24,9 @@
             android:orientation="vertical"
             tools:context=".view.home.HomeFragment">
 
-            <include layout="@layout/layout_top_search_bar" />
+            <include
+                android:id="@+id/layoutTopSearchBar"
+                layout="@layout/layout_top_search_bar" />
 
             <androidx.core.widget.NestedScrollView
                 android:id="@+id/nsvHome"
@@ -400,6 +402,12 @@
                 </LinearLayout>
             </androidx.core.widget.NestedScrollView>
         </LinearLayout>
+
+        <!-- 통합 검색 오버레이 -->
+        <include
+            android:id="@+id/layoutSearchOverlay"
+            layout="@layout/layout_search_overlay"
+            android:visibility="gone" />
 
         <com.google.android.material.floatingactionbutton.FloatingActionButton
             android:id="@+id/fab_home_add"

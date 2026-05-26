@@ -17,6 +17,9 @@
             android:name=".view.main.MainActivity"
             android:exported="false" />
         <activity
+            android:name=".view.home.weather.WeatherActivity"
+            android:exported="false" />
+        <activity
             android:name=".view.improvement.detail.ImprovementDetailActivity"
             android:exported="false" />
         <activity
