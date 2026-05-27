@@ -13,18 +13,6 @@ import dagger.hilt.android.AndroidEntryPoint
 class IncidentFragment :
     BaseFragment<FragmentIncidentBinding, MainViewModel>(R.layout.fragment_incident) {
     override var bindingApply: (FragmentIncidentBinding.() -> Unit)? = {
-        itemIncidentServerDown.setOnClickListener {
-            findNavController().navigate(R.id.action_incidentFragment_to_incidentDetailFragment)
-        }
-        itemIncidentPaymentError.setOnClickListener {
-            findNavController().navigate(R.id.action_incidentFragment_to_incidentDetailFragment)
-        }
-        itemIncidentDatabaseError.setOnClickListener {
-            findNavController().navigate(R.id.action_incidentFragment_to_incidentDetailFragment)
-        }
-        itemIncidentServerOverload.setOnClickListener {
-            findNavController().navigate(R.id.action_incidentFragment_to_incidentDetailFragment)
-        }
         fabIncidentAdd.setOnClickListener {
             startActivityInFragment<IncidentFormActivity>()
         }

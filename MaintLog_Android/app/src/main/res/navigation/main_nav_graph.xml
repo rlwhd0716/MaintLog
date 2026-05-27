@@ -10,86 +10,31 @@
         android:name="com.github.maintlog_android.view.home.HomeFragment"
         android:label="home">
         <action
-            android:id="@+id/action_homeFragment_to_requestDetailFragment"
-            app:destination="@id/requestDetailFragment" />
+            android:id="@+id/action_homeFragment_to_improvementFragment"
+            app:destination="@id/improvementFragment" />
         <action
-            android:id="@+id/action_homeFragment_to_requestFormFragment"
-            app:destination="@id/requestFormFragment" />
-        <action
-            android:id="@+id/action_homeFragment_to_incidentDetailFragment"
-            app:destination="@id/incidentDetailFragment" />
-        <action
-            android:id="@+id/action_homeFragment_to_incidentFormFragment"
-            app:destination="@id/incidentFormFragment" />
+            android:id="@+id/action_homeFragment_to_incidentFragment"
+            app:destination="@id/incidentFragment" />
     </fragment>
 
     <fragment
-        android:id="@+id/requestFragment"
+        android:id="@+id/improvementFragment"
         android:name="com.github.maintlog_android.view.improvement.ImprovementFragment"
-        android:label="request">
-        <action
-            android:id="@+id/action_requestFragment_to_requestDetailFragment"
-            app:destination="@id/requestDetailFragment" />
-        <action
-            android:id="@+id/action_requestFragment_to_requestFormFragment"
-            app:destination="@id/requestFormFragment" />
-    </fragment>
+        android:label="improvement"/>
 
     <fragment
         android:id="@+id/incidentFragment"
         android:name="com.github.maintlog_android.view.incident.IncidentFragment"
-        android:label="incident">
-        <action
-            android:id="@+id/action_incidentFragment_to_incidentDetailFragment"
-            app:destination="@id/incidentDetailFragment" />
-        <action
-            android:id="@+id/action_incidentFragment_to_incidentFormFragment"
-            app:destination="@id/incidentFormFragment" />
-    </fragment>
+        android:label="incident"/>
 
     <fragment
-        android:id="@+id/searchFragment"
-        android:name="com.github.maintlog_android.view.search.SearchFragment"
-        android:label="search">
-        <action
-            android:id="@+id/action_searchFragment_to_requestDetailFragment"
-            app:destination="@id/requestDetailFragment" />
-        <action
-            android:id="@+id/action_searchFragment_to_incidentDetailFragment"
-            app:destination="@id/incidentDetailFragment" />
-    </fragment>
+        android:id="@+id/statisticsFragment"
+        android:name="com.github.maintlog_android.view.statistics.StatisticsFragment"
+        android:label="statistics"/>
 
     <fragment
         android:id="@+id/settingFragment"
         android:name="com.github.maintlog_android.view.setting.SettingFragment"
         android:label="setting" />
-
-    <fragment
-        android:id="@+id/requestDetailFragment"
-        android:name="com.github.maintlog_android.view.improvement.detail.ImprovementDetailActivity"
-        android:label="request_detail">
-        <action
-            android:id="@+id/action_requestDetailFragment_to_requestFormFragment"
-            app:destination="@id/requestFormFragment" />
-    </fragment>
-
-    <fragment
-        android:id="@+id/requestFormFragment"
-        android:name="com.github.maintlog_android.view.improvement.form.ImprovementFormActivity"
-        android:label="request_form" />
-
-    <fragment
-        android:id="@+id/incidentDetailFragment"
-        android:name="com.github.maintlog_android.view.incident.detail.IncidentDetailActivity"
-        android:label="incident_detail">
-        <action
-            android:id="@+id/action_incidentDetailFragment_to_incidentFormFragment"
-            app:destination="@id/incidentFormFragment" />
-    </fragment>
-
-    <fragment
-        android:id="@+id/incidentFormFragment"
-        android:name="com.github.maintlog_android.view.incident.form.IncidentFormActivity"
-        android:label="incident_form" />
 
 </navigation>
