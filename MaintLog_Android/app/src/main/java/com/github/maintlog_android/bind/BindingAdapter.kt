@@ -5,8 +5,10 @@ import androidx.annotation.ColorInt
 import androidx.databinding.BindingAdapter
 import androidx.recyclerview.widget.RecyclerView
 import com.github.domain.model.action.ActionData
+import com.github.domain.model.improvement.ImprovementDetailData
 import com.github.domain.model.work.WorkLogData
 import com.github.maintlog_android.view.home.HomeActionAdapter
+import com.github.maintlog_android.view.improvement.ImprovementListAdapter
 import com.github.maintlog_android.view.work.WorkLogAdapter
 import com.github.util.event.MutableListLiveData
 import com.github.util.extension.logE
@@ -26,6 +28,10 @@ fun setBindRecyclerViewAdapter(view: RecyclerView, datas: MutableListLiveData<*>
                 this.datas = ((datas.value ?: mutableListOf()) as MutableList<ActionData>)
                     .take(5)
                     .toMutableList()
+            }
+
+            is ImprovementListAdapter -> {
+                this.datas = (datas.value ?: mutableListOf()) as MutableList<ImprovementDetailData>
             }
         }
         this.notifyDataSetChanged()

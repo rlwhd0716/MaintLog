@@ -3,25 +3,27 @@
 
     <item
         android:id="@+id/homeFragment"
+        android:icon="@drawable/ic_home"
         android:title="홈" />
-    <!--        android:icon="@drawable/ic_home"-->
 
     <item
         android:id="@+id/improvementFragment"
+        android:icon="@drawable/ic_improvement"
         android:title="요청사항" />
-<!--    android:icon="@drawable/ic_search"-->
 
     <item
         android:id="@+id/incidentFragment"
+        android:icon="@drawable/ic_incident"
         android:title="장애" />
 
     <item
         android:id="@+id/searchFragment"
+        android:icon="@drawable/ic_search"
         android:title="검색" />
 
     <item
         android:id="@+id/settingFragment"
+        android:icon="@drawable/ic_setting"
         android:title="설정" />
-<!--    android:icon="@drawable/ic_person"-->
 
 </menu>
