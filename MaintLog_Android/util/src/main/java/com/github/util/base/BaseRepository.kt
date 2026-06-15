@@ -1,5 +1,6 @@
 package com.github.util.base
 
+import android.os.Parcelable
 import retrofit2.Response
 
 open class BaseRepository {
@@ -26,4 +27,15 @@ open class BaseRepository {
             RepositoryResult.Error(e.message ?: "Internet error runs")
         }
     }
+
+    suspend fun <T: Parcelable> safeDBCall(call: suspend () -> T): RepositoryResult<T> {
+        return try {
+            call.invoke().let {
+                RepositoryResult.Success(it)
+            }
+        } catch (e: Exception) {
+            RepositoryResult.Error(e.message ?: "Database error runs")
+        }
+    }
+
 }

@@ -1,4 +1,4 @@
-package com.github.data.datasource
+package com.github.data.datasource.remote
 
 import com.github.domain.model.weather.WeatherRequestData
 import com.github.domain.model.weather.WeatherResponse

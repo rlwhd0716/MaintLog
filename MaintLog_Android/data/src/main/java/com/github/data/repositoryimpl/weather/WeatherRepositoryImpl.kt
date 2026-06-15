@@ -1,6 +1,6 @@
 package com.github.data.repositoryimpl.weather
 
-import com.github.data.datasource.PublicDataDataSource
+import com.github.data.datasource.remote.PublicDataDataSource
 import com.github.domain.model.weather.WeatherRequestData
 import com.github.domain.repository.weather.WeatherRepository
 import com.github.util.base.BaseRepository

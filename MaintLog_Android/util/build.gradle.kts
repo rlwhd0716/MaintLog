@@ -66,8 +66,11 @@ dependencies {
     implementation(libs.bundles.coroutines)
 
     // location
-    // vietmap 과 동일한 버전의 라이브러리 사용
     implementation(libs.androidsvg)
 
     implementation(libs.shimmer)
+
+    // room
+    implementation(libs.bundles.room)
+    ksp(libs.room.compiler)
 }

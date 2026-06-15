@@ -1,8 +1,8 @@
-package com.github.data.datasource.impl
+package com.github.data.datasource.impl.remote
 
 import com.github.data.annotation.PublicDataApiKey
 import com.github.data.api.PublicDataApiService
-import com.github.data.datasource.PublicDataDataSource
+import com.github.data.datasource.remote.PublicDataDataSource
 import com.github.domain.model.weather.WeatherRequestData
 import javax.inject.Inject
 

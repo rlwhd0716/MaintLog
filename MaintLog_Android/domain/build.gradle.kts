@@ -50,4 +50,8 @@ dependencies {
 
     // Retrofit, Okhttp, gson
     implementation(libs.bundles.retrofit)
+
+    // room
+    implementation(libs.bundles.room)
+    ksp(libs.room.compiler)
 }

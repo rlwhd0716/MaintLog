@@ -96,4 +96,8 @@ dependencies {
     implementation(libs.glide.core)
     ksp(libs.glide.compiler)
     implementation(libs.shimmer)
+
+    // room
+    implementation(libs.bundles.room)
+    ksp(libs.room.compiler)
 }
