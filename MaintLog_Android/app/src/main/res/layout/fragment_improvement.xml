@@ -22,18 +22,17 @@
             tools:context=".view.main.MainActivity">
 
             <com.github.util.ui.CustomTitleView
-                android:id="@+id/title_request"
+                android:id="@+id/titleImprovement"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 app:itemTitleText="요청사항" />
 
             <LinearLayout
-                android:id="@+id/llRequestFilter"
+                android:id="@+id/llImprovementFilter"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="@color/rvItemSubColor"
-                android:orientation="horizontal"
-                android:padding="@dimen/padding_12dp">
+                android:orientation="horizontal">
 
                 <com.google.android.material.tabs.TabLayout
                     android:id="@+id/tlImprovementList"
@@ -41,27 +40,27 @@
                     android:layout_height="wrap_content">
 
                     <com.google.android.material.tabs.TabItem
-                        android:id="@+id/tiImprovementAll"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:tag="all"
                         android:text="전체" />
 
                     <com.google.android.material.tabs.TabItem
-                        android:id="@+id/tiImprovementInProgress"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:tag="inProgress"
                         android:text="진행중" />
 
                     <com.google.android.material.tabs.TabItem
-                        android:id="@+id/tiImprovementDone"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:tag="done"
                         android:text="완료" />
 
                     <com.google.android.material.tabs.TabItem
-                        android:id="@+id/tiImprovementHold"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:tag="wait"
                         android:text="보류" />
                 </com.google.android.material.tabs.TabLayout>
             </LinearLayout>
@@ -71,7 +70,8 @@
                 android:layout_height="0dp"
                 android:layout_weight="1"
                 android:orientation="vertical"
-                android:paddingHorizontal="@dimen/padding_16dp">
+                android:paddingVertical="@dimen/padding_8dp"
+                android:paddingHorizontal="@dimen/padding_12dp">
 
                 <androidx.recyclerview.widget.RecyclerView
                     android:layout_width="match_parent"
@@ -84,7 +84,7 @@
 
         <!-- TODO: 디자인 아이콘 리소스 확정 시 placeholder drawable 교체. -->
         <com.google.android.material.floatingactionbutton.FloatingActionButton
-            android:id="@+id/fab_request_add"
+            android:id="@+id/fabImprovementAdd"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="bottom|end"

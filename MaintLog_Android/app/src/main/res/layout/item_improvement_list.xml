@@ -9,11 +9,11 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
         android:orientation="vertical">
 
         <LinearLayout
-            android:id="@+id/item_request_login_error"
+            android:id="@+id/itemRequestLoginError"
             android:layout_width="match_parent"
             android:layout_height="92dp"
             android:gravity="center_vertical"
@@ -26,7 +26,7 @@
                 android:orientation="vertical">
 
                 <TextView
-                    android:id="@+id/tv_request_login_title"
+                    android:id="@+id/tvRequestLoginTitle"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/pretendard_semibold"
@@ -35,7 +35,7 @@
                     android:textSize="@dimen/content_20" />
 
                 <TextView
-                    android:id="@+id/tv_request_login_meta"
+                    android:id="@+id/tvRequestLoginMeta"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="@dimen/margin_8dp"
@@ -45,7 +45,7 @@
             </LinearLayout>
 
             <TextView
-                android:id="@+id/tv_request_login_status"
+                android:id="@+id/tvRequestLoginStatus"
                 android:layout_width="78dp"
                 android:layout_height="36dp"
                 android:background="@color/primaryGray"

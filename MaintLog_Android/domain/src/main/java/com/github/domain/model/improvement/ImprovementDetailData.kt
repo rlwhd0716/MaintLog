@@ -7,5 +7,8 @@ import kotlinx.parcelize.Parcelize
 @Parcelize
 data class ImprovementDetailData(
     @SerializedName("sn")
-    val sn: Int
+    val sn: Int,
+
+    @SerializedName("status")
+    val status: String
 ) : Parcelable
