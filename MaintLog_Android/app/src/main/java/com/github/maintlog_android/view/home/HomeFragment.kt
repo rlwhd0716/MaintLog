@@ -109,7 +109,7 @@ class HomeFragment : BaseFragment<FragmentHomeBinding, MainViewModel>(R.layout.f
     private fun showIntegratedSearch() {
         binding?.layoutSearchOverlay?.root?.visibility = View.VISIBLE
 
-        val fadeIn = AnimationUtils.loadAnimation(requireContext(), R.anim.fade_in)
+        val fadeIn = AnimationUtils.loadAnimation(requireContext(), com.github.util.R.anim.fade_in)
         binding?.layoutSearchOverlay?.root?.startAnimation(fadeIn)
 
         binding?.layoutSearchOverlay?.etIntegratedSearch?.requestFocus()
@@ -123,7 +123,7 @@ class HomeFragment : BaseFragment<FragmentHomeBinding, MainViewModel>(R.layout.f
     }
 
     private fun hideIntegratedSearch() {
-        val fadeOut = AnimationUtils.loadAnimation(requireContext(), R.anim.fade_out)
+        val fadeOut = AnimationUtils.loadAnimation(requireContext(), com.github.util.R.anim.fade_out)
 
         fadeOut.setAnimationListener(object : Animation.AnimationListener {
             override fun onAnimationStart(animation: Animation?) = Unit
